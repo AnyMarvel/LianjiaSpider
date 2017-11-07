@@ -2,7 +2,6 @@
 import re
 import requests
 
-
 class LianjiaSpider:
     # 初始化构造函数
     def __init__(self):
