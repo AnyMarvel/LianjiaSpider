@@ -1,25 +1,47 @@
 # -*- coding: utf-8 -*-
+import xlrd
 import xlwt
-from datetime import datetime
 
 
 class generate_excle:
     def __init__(self):
         self.raws = []
+        self.wb = xlwt.Workbook()
 
     def start(self):
-        style0 = xlwt.easyxf('font: name Times New Roman, color-index red, bold on', num_format_str='#,##0.00')
-        style1 = xlwt.easyxf(num_format_str='D-MMM-YY')
-        wb = xlwt.Workbook()
-        ws = wb.add_sheet('A Test Sheet')
+        # self.write()
+        list = []
+        list.append("1")
+        list.append("2")
+        list.append("4")
+        self.writeExcle(0, list)
+        self.saveExcle()
 
-        ws.write(0, 0, 1234.56, style0)
-        ws.write(1, 0, datetime.now(), style1)
-        ws.write(2, 0, 1)
-        ws.write(2, 1, 1)
-        ws.write(2, 2, xlwt.Formula("A3+B3"))
-        wb.save('example.xls')
+    def writeExcle(self, rowNumber, list):
+        for index in range(len(list)):
+            self.ws.write(rowNumber, index, list[index])
 
+    def saveExcle(self):
+        self.wb.save('LianJiaSpider.xls')
 
-generate_excle = generate_excle()
-generate_excle.start()
+    def addSheetExcle(self, sheetName):
+        self.ws = self.wb.add_sheet(sheetName)
+        # ##读文件占时未使用到
+        # def readExcle(self):
+        #     excleData = xlrd.open_workbook("example.xls")
+        #     table = excleData.sheets()[0]
+        #     # 获取整行数据
+        #     tablerow = table.row_values(1)
+        #     # 获取整列数据
+        #     table_col = table.col_values(1)
+        #     # 5、获取行数和列数　
+        #     table.nrows
+        #     table.ncols
+        #     # 6、获取单元格
+        #     table.cell(0, 0).value
+        #     table.cell(0, 0).value
+        #     print tablerow, table_col
+
+# generate_excle = generate_excle()
+#
+# generate_excle.start()
