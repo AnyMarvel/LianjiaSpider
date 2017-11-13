@@ -37,7 +37,6 @@ class salingInfo:
         self.generate_excle.saveExcle()
 
     def get_allurl(self, generate_allurl):
-
         geturl = self.requestUrlForRe(generate_allurl)
         if geturl.status_code == 200:
             # 提取title跳转地址　对应每个商品
@@ -56,32 +55,38 @@ class salingInfo:
             self.infos['每平方售价'] = soup.select('.unitPriceValue')[0].text
             self.list = [re_get, self.infos['标题'], self.infos['总价'], self.infos['每平方售价']]
 
-            row = index + (self.page - 1) * 30
-            self.generate_excle.writeExcle(row, self.list)
-            print row, re_get, self.infos['标题'], self.infos['总价'], self.infos['每平方售价']
+        row = index + (self.page - 1) * 30
+        self.generate_excle.writeExcle(row, self.list)
+        print row, re_get, self.infos['标题'], self.infos['总价'], self.infos['每平方售价']
 
-            return self.infos
+        return self.infos
 
     # 封装统一request请求,采取动态代理和动态修改User-Agent方式进行访问设置,减少服务端手动暂停的问题
     def requestUrlForRe(self, url):
 
-        if len(self.proxyServer) == 0:
-            tempProxyServer = self.getIpProxy.get_random_ip()
-        else:
-            tempProxyServer = self.proxyServer
+        try:
+            if len(self.proxyServer) == 0:
+                tempProxyServer = self.getIpProxy.get_random_ip()
+            else:
+                tempProxyServer = self.proxyServer
 
-        proxy_dict = {
-            tempProxyServer[0]: tempProxyServer[1]
-        }
-        tempUrl = requests.get(url, headers=hds[random.randint(0, len(hds) - 1)], proxies=proxy_dict)
+            proxy_dict = {
+                tempProxyServer[0]: tempProxyServer[1]
+            }
+            tempUrl = requests.get(url, headers=hds[random.randint(0, len(hds) - 1)], proxies=proxy_dict)
 
-        code = tempUrl.status_code
-        if code >= 200 or code < 300:
-            self.proxyServer = tempProxyServer
-            return tempUrl
-        else:
+            code = tempUrl.status_code
+            if code >= 200 or code < 300:
+                self.proxyServer = tempProxyServer
+                return tempUrl
+            else:
+                self.proxyServer = self.getIpProxy.get_random_ip()
+                return self.requestUrlForRe(url)
+        except Exception as e:
             self.proxyServer = self.getIpProxy.get_random_ip()
-            self.requestUrlForRe(url)
+            s = requests.session()
+            s.keep_alive = False
+            return self.requestUrlForRe(url)
 
 
 spider = salingInfo()
