@@ -14,6 +14,7 @@ class salingInfo:
         self.getIpProxy = GetIpProxy()
         self.url = "http://bj.lianjia.com/ershoufang/pg{}/"
         self.infos = {}
+        self.proxyServer = ()
         # 传参使用进行excle生成
         self.list = []
         self.generate_excle = generate_excle()
@@ -60,14 +61,27 @@ class salingInfo:
             print row, re_get, self.infos['标题'], self.infos['总价'], self.infos['每平方售价']
 
             return self.infos
-    #封装统一request请求,采取动态代理和动态修改User-Agent方式进行访问设置,减少服务端手动暂停的问题
+
+    # 封装统一request请求,采取动态代理和动态修改User-Agent方式进行访问设置,减少服务端手动暂停的问题
     def requestUrlForRe(self, url):
-        proxyServer = self.getIpProxy.get_random_ip();
+
+        if len(self.proxyServer) == 0:
+            tempProxyServer = self.getIpProxy.get_random_ip()
+        else:
+            tempProxyServer = self.proxyServer
+
         proxy_dict = {
-            proxyServer[0]: proxyServer[1]
+            tempProxyServer[0]: tempProxyServer[1]
         }
         tempUrl = requests.get(url, headers=hds[random.randint(0, len(hds) - 1)], proxies=proxy_dict)
-        return tempUrl
+
+        code = tempUrl.status_code
+        if code >= 200 or code < 300:
+            self.proxyServer = tempProxyServer
+            return tempUrl
+        else:
+            self.proxyServer = self.getIpProxy.get_random_ip()
+            self.requestUrlForRe(url)
 
 
 spider = salingInfo()
