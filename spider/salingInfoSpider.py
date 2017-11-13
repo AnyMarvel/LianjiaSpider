@@ -5,11 +5,13 @@ import requests
 from bs4 import BeautifulSoup
 from generate_excle import generate_excle
 from AgentAndProxies import hds
+from  AgentAndProxies import GetIpProxy
 
 
 class salingInfo:
     # 初始化构造函数
     def __init__(self):
+        self.getIpProxy = GetIpProxy()
         self.url = "http://bj.lianjia.com/ershoufang/pg{}/"
         self.infos = {}
         # 传参使用进行excle生成
@@ -34,7 +36,8 @@ class salingInfo:
         self.generate_excle.saveExcle()
 
     def get_allurl(self, generate_allurl):
-        geturl = requests.get(generate_allurl, headers=hds[random.randint(0, len(hds) - 1)])
+
+        geturl = self.requestUrlForRe(generate_allurl)
         if geturl.status_code == 200:
             # 提取title跳转地址　对应每个商品
             re_set = re.compile('<li.*?class="clear">.*?<a.*?class="img.*?".*?href="(.*?)"')
@@ -44,7 +47,7 @@ class salingInfo:
                 # print re_get[index]
 
     def open_url(self, re_get, index):
-        res = requests.get(re_get)
+        res = self.requestUrlForRe(re_get)
         if res.status_code == 200:
             soup = BeautifulSoup(res.text, 'lxml')
             self.infos['标题'] = soup.select('.main')[0].text
@@ -57,6 +60,14 @@ class salingInfo:
             print row, re_get, self.infos['标题'], self.infos['总价'], self.infos['每平方售价']
 
             return self.infos
+    #封装统一request请求,采取动态代理和动态修改User-Agent方式进行访问设置,减少服务端手动暂停的问题
+    def requestUrlForRe(self, url):
+        proxyServer = self.getIpProxy.get_random_ip();
+        proxy_dict = {
+            proxyServer[0]: proxyServer[1]
+        }
+        tempUrl = requests.get(url, headers=hds[random.randint(0, len(hds) - 1)], proxies=proxy_dict)
+        return tempUrl
 
 
 spider = salingInfo()

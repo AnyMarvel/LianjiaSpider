@@ -58,7 +58,7 @@ class GetIpProxy():
 
     def judge_ip(self, proxy_url, protocol):
         # 判断给出的代理 ip 是否可用
-        http_url = 'http://www.163.com/'
+        http_url = 'http://bj.lianjia.com/'
 
         print("proxy_url", proxy_url)
         try:
@@ -83,9 +83,8 @@ class GetIpProxy():
         for i in range(len(self.infos.keys())):
             judge_ip_status = self.judge_ip(self.infos.keys()[i], self.infos.values()[i])
             if judge_ip_status:
+                return self.infos.items()[i]
 
-                return self.infos.values()[i]
-
-
-getIpProxy = GetIpProxy()
-getIpProxy.get_random_ip()
+#
+# getIpProxy = GetIpProxy()
+# getIpProxy.get_random_ip()
