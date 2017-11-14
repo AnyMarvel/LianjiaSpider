@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 from generate_excle import generate_excle
 from AgentAndProxies import hds
 from  AgentAndProxies import GetIpProxy
+import lxml
 
 
 class salingInfo:
