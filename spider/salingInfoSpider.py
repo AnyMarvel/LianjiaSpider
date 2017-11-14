@@ -51,12 +51,38 @@ class salingInfo:
         res = self.requestUrlForRe(re_get)
         if res.status_code == 200:
             soup = BeautifulSoup(res.text, 'lxml')
+            self.infos['网址'] = re_get
             self.infos['标题'] = soup.select('.main')[0].text
             self.infos['总价'] = soup.select('.total')[0].text + u'万'
             self.infos['每平方售价'] = soup.select('.unitPriceValue')[0].text
+
+            self.infos['户型'] = soup.select('.mainInfo')[0].text
+            self.infos['朝向'] = soup.select('.mainInfo')[1].text
+            self.infos['大小'] = soup.select('.mainInfo')[2].text
+            self.infos['楼层'] = soup.select('.subInfo')[0].text
+            self.infos['装修'] = soup.select('.subInfo')[1].text
+            self.infos['房子类型'] = soup.select('.subInfo')[2].text
+
+            self.infos['小区名称'] = soup.select('.info')[0].text
+            self.infos['区域'] = soup.select('.info > a')[0].text
+            # infos['地区'] = soup.select('.info > a')[1].text
+            self.infos['详细区域'] = soup.select('.info')[1].text
+            self.infos['链家编号'] = soup.select('.info')[3].text
+            self.infos['关注房源'] = soup.select('#favCount')[0].text + u"人关注"
+            self.infos['看过房源'] = soup.select('#cartCount')[0].text + u"人看过"
+
+            partent = re.compile('<li><span class="label">(.*?)</span>(.*?)</li>')
+            result = re.findall(partent, res.text)
+
+            for item in result:
+                if item[0] != u"抵押信息" and item[0] != u"房本备件":
+                    self.infos[item[0]] = item[1]
+
             self.list = [re_get, self.infos['标题'], self.infos['总价'], self.infos['每平方售价']]
 
+        # todo 计算页数,第一行填充key值,后续填充value值
         row = index + (self.page - 1) * 30
+
         self.generate_excle.writeExcle(row, self.list)
         print row, re_get, self.infos['标题'], self.infos['总价'], self.infos['每平方售价']
 
