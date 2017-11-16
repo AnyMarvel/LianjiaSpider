@@ -88,23 +88,17 @@ class salingInfo:
             # self.list = [re_get, self.infos['标题'], self.infos['总价'], self.infos['每平方售价']]
 
             # todo 计算页数,第一行填充key值,后续填充value值
-            self.list = []
             row = index + (self.page - 1) * 30
-            print  'row:' + str(row)
+            print 'row:' + str(row)
             if row == 0:
+                self.list = []
                 for itemKey in self.infos.keys():
                     self.list.append(itemKey)
                 self.generate_excle.writeExcle(0, self.list)
-                self.list = []
-                for itemValue in self.infos.values():
-                    self.list.append(itemValue)
-                self.generate_excle.writeExcle(1, self.list)
+                self.wirte_source_data(1)
             else:
                 row = row + 1
-                for itemValue in self.infos.values():
-                    self.list.append(itemValue)
-                self.generate_excle.writeExcle(row, self.list)
-                # print row, re_get, self.infos['标题'], self.infos['总价'], self.infos['每平方售价']
+                self.wirte_source_data(row)
                 # print str(self.list)[1:len(str(self.list)) - 1]
         return self.infos
 
@@ -134,6 +128,17 @@ class salingInfo:
             s = requests.session()
             s.keep_alive = False
             return self.requestUrlForRe(url)
+
+    # 源数据生成,写入excle中,从infos字典中读取数据,放置到list列表中进行写入操作,其中可修改规定写入格式
+    def wirte_source_data(self, row):
+        self.list = []
+        for itemKey in self.infos.keys():
+            if str(itemKey) == '每平方售价':
+                item_value = self.infos.get(itemKey)[0:self.infos.get(itemKey).index('元')]
+            else:
+                item_value = self.infos.get(itemKey)
+            self.list.append(item_value)
+        self.generate_excle.writeExcle(row, self.list)
 
 
 spider = salingInfo()
