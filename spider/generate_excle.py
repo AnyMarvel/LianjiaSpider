@@ -31,6 +31,9 @@ class generate_excle:
         for index in range(len(list)):
             self.ws.write(rowNumber, index, list[index])
 
+    def writeExcle(self, rowNumber, column, source_data):
+        self.ws.write(rowNumber, column, source_data)
+
     def saveExcle(self):
         self.wb.save(u'LianJiaSpider.xls')
 
