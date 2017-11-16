@@ -1,0 +1,35 @@
+# -*- coding: utf-8 -*-
+
+elementConstant = {}
+elementConstant['序号'] = 0
+elementConstant['链家编号'] = 1
+elementConstant['状态'] = 2
+elementConstant['单价（元/平米）'] = 3
+elementConstant['建筑面积：平米'] = 4
+elementConstant['挂牌时间'] = 5
+elementConstant['上次交易时间'] = 5
+elementConstant['建成时间：年'] = 6
+elementConstant['城市'] = 7
+elementConstant['所属下辖区'] = 8
+elementConstant['所属商圈'] = 9
+elementConstant['所属小区'] = 10
+elementConstant['所属环线'] = 11
+elementConstant['户型'] = 12
+elementConstant['朝向'] = 13
+elementConstant['梯户比例'] = 14
+elementConstant['房屋用途'] = 15
+elementConstant['产权年限'] = 16
+elementConstant['建筑类型'] = 17
+elementConstant['交易权属'] = 18
+elementConstant['装修情况'] = 19
+elementConstant['建筑结构'] = 20
+elementConstant['供暖方式'] = 21
+elementConstant['产权所属'] = 22
+elementConstant['户型结构'] = 23
+elementConstant['配备电梯'] = 24
+elementConstant['楼层'] = 25
+elementConstant['房屋年限'] = 26
+elementConstant['标题'] = 27
+elementConstant['网址'] = 28
+elementConstant['关注（人）'] = 29
+elementConstant['看过房源：人'] = 30

@@ -8,6 +8,7 @@ from AgentAndProxies import hds
 from AgentAndProxies import GetIpProxy
 import lxml
 import sys
+from model.ElementConstant import elementConstant
 
 defaultencoding = 'utf-8'
 if sys.getdefaultencoding() != defaultencoding:
