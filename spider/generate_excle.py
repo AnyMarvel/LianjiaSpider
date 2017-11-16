@@ -1,12 +1,22 @@
 # -*- coding: utf-8 -*-
 import xlrd
 import xlwt
+import sys
+
+defaultencoding = 'utf-8'
+if sys.getdefaultencoding() != defaultencoding:
+    reload(sys)
+    sys.setdefaultencoding(defaultencoding)
 
 
 class generate_excle:
     def __init__(self):
+        print sys.getdefaultencoding()
+        if sys.getdefaultencoding() != 'utf-8':
+            reload(sys)
+            sys.setdefaultencoding('utf-8')
         self.raws = []
-        self.wb = xlwt.Workbook()
+        self.wb = xlwt.Workbook(encoding='utf-8')
 
     def start(self):
         # self.write()
@@ -22,7 +32,7 @@ class generate_excle:
             self.ws.write(rowNumber, index, list[index])
 
     def saveExcle(self):
-        self.wb.save('LianJiaSpider.xls')
+        self.wb.save(u'LianJiaSpider.xls')
 
     def addSheetExcle(self, sheetName):
         self.ws = self.wb.add_sheet(sheetName)

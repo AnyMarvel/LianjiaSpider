@@ -5,13 +5,20 @@ import requests
 from bs4 import BeautifulSoup
 from generate_excle import generate_excle
 from AgentAndProxies import hds
-from  AgentAndProxies import GetIpProxy
+from AgentAndProxies import GetIpProxy
 import lxml
+import sys
+
+defaultencoding = 'utf-8'
+if sys.getdefaultencoding() != defaultencoding:
+    reload(sys)
+    sys.setdefaultencoding(defaultencoding)
 
 
 class salingInfo:
     # 初始化构造函数
     def __init__(self):
+
         self.getIpProxy = GetIpProxy()
         self.url = "http://bj.lianjia.com/ershoufang/pg{}/"
         self.infos = {}
@@ -78,14 +85,27 @@ class salingInfo:
                 if item[0] != u"抵押信息" and item[0] != u"房本备件":
                     self.infos[item[0]] = item[1]
 
-            self.list = [re_get, self.infos['标题'], self.infos['总价'], self.infos['每平方售价']]
+            # self.list = [re_get, self.infos['标题'], self.infos['总价'], self.infos['每平方售价']]
 
-        # todo 计算页数,第一行填充key值,后续填充value值
-        row = index + (self.page - 1) * 30
-
-        self.generate_excle.writeExcle(row, self.list)
-        print row, re_get, self.infos['标题'], self.infos['总价'], self.infos['每平方售价']
-
+            # todo 计算页数,第一行填充key值,后续填充value值
+            self.list = []
+            row = index + (self.page - 1) * 30
+            print  'row:' + str(row)
+            if row == 0:
+                for itemKey in self.infos.keys():
+                    self.list.append(itemKey)
+                self.generate_excle.writeExcle(0, self.list)
+                self.list = []
+                for itemValue in self.infos.values():
+                    self.list.append(itemValue)
+                self.generate_excle.writeExcle(1, self.list)
+            else:
+                row = row + 1
+                for itemValue in self.infos.values():
+                    self.list.append(itemValue)
+                self.generate_excle.writeExcle(row, self.list)
+                # print row, re_get, self.infos['标题'], self.infos['总价'], self.infos['每平方售价']
+                # print str(self.list)[1:len(str(self.list)) - 1]
         return self.infos
 
     # 封装统一request请求,采取动态代理和动态修改User-Agent方式进行访问设置,减少服务端手动暂停的问题
