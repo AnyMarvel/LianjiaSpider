@@ -39,7 +39,7 @@ if res.status_code == 200:
     # infos['房屋特点介绍'] = soup.select('div[class="introContent showbasemore"]')[0].text
 
     for i in range(len(infos)):
-        print infos.keys()[i],infos.get(infos.keys()[i])
+        print infos.keys()[i], infos.get(infos.keys()[i])
 
 
         # print infos['标题'], infos['总价'], infos['每平方售价'], infos['户型'], infos['朝向'], infos['楼层'], infos['装修'], infos['房子类型'], \
