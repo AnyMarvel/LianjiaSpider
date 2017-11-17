@@ -19,19 +19,13 @@ class generate_excle:
         self.wb = xlwt.Workbook(encoding='utf-8')
 
     def start(self):
-        # self.write()
-        list = []
-        list.append("1")
-        list.append("2")
-        list.append("4")
-        self.writeExcle(0, list)
-        self.saveExcle()
+        pass
 
     def writeExcle(self, rowNumber, list):
         for index in range(len(list)):
             self.ws.write(rowNumber, index, list[index])
 
-    def writeExcle(self, rowNumber, column, source_data):
+    def writeExclePositon(self, rowNumber, column, source_data):
         self.ws.write(rowNumber, column, source_data)
 
     def saveExcle(self):

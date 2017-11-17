@@ -8,7 +8,7 @@ from AgentAndProxies import hds
 from AgentAndProxies import GetIpProxy
 import lxml
 import sys
-from model.ElementConstant import elementConstant
+from model.ElementConstant import ElementConstant
 
 defaultencoding = 'utf-8'
 if sys.getdefaultencoding() != defaultencoding:
@@ -19,7 +19,7 @@ if sys.getdefaultencoding() != defaultencoding:
 class salingInfo:
     # 初始化构造函数
     def __init__(self):
-
+        self.elementConstant = ElementConstant()
         self.getIpProxy = GetIpProxy()
         self.url = "http://bj.lianjia.com/ershoufang/pg{}/"
         self.infos = {}
@@ -27,6 +27,7 @@ class salingInfo:
         # 传参使用进行excle生成
         self.list = []
         self.generate_excle = generate_excle()
+        self.elementConstant = ElementConstant()
 
     # 生成需要生成页数的链接
     def generate_allurl(self, user_in_nub):
@@ -92,11 +93,35 @@ class salingInfo:
             row = index + (self.page - 1) * 30
             print 'row:' + str(row)
             if row == 0:
-                self.list = []
+                # self.list = []
+                # for itemKey in self.infos.keys():
+                #     self.list.append(itemKey)
+                # self.generate_excle.writeExcle(0, self.list)
+                for index_item in self.elementConstant.data_constant.keys():
+                    self.generate_excle.writeExclePositon(0, self.elementConstant.data_constant.get(index_item),
+                                                          index_item)
+                # todo 修改适配excle格式的内容适配
                 for itemKey in self.infos.keys():
-                    self.list.append(itemKey)
-                self.generate_excle.writeExcle(0, self.list)
-                self.wirte_source_data(1)
+                    if itemKey == '详细区域':
+                        item_valus = self.infos.get(itemKey)
+                        temps_item_valus = str(item_valus).split()
+                        print temps_item_valus[0], temps_item_valus[1], temps_item_valus[2]
+                        # self.generate_excle.writeExclePositon(1, self.elementConstant.data_constant.get('所属下辖区'),
+                        #                                       temps_item_valus[0])
+                        # self.generate_excle.writeExclePositon(1, self.elementConstant.data_constant.get('所属商圈'),
+                        #                                       temps_item_valus[1])
+                        # self.generate_excle.writeExclePositon(1, self.elementConstant.data_constant.get('所属环线'),
+                        #                                       temps_item_valus[2])
+                    else:
+
+                        tempItemKey = self.elementConstant.unit_check_name(itemKey)
+                        print tempItemKey, self.elementConstant.data_constant.get(str(tempItemKey)), itemKey
+
+                        # self.generate_excle.writeExclePositon(1,
+                        #                                       str(self.elementConstant.data_constant.get(tempItemKey)),
+                        #                                       itemKey)
+
+                        # self.wirte_source_data(1)
             else:
                 row = row + 1
                 self.wirte_source_data(row)
