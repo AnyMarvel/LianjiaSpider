@@ -86,6 +86,9 @@ class salingInfo:
                 if item[0] != u"抵押信息" and item[0] != u"房本备件":
                     self.infos[item[0]] = item[1]
             row = index + (self.page - 1) * 30
+            self.infos['序号'] = row + 1
+            self.infos['状态'] = u'在售'
+            self.infos['城市'] = u'北京'
             print 'row:' + str(row)
             if row == 0:
                 for index_item in self.elementConstant.data_constant.keys():
@@ -129,7 +132,7 @@ class salingInfo:
     # 源数据生成,写入excle中,从infos字典中读取数据,放置到list列表中进行写入操作,其中可修改规定写入格式
     def wirte_source_data(self, row):
         for itemKey in self.infos.keys():
-            print itemKey + ':' + self.infos.get(itemKey)
+            print itemKey + ':' + str(self.infos.get(itemKey))
 
             item_valus = self.infos.get(itemKey)
             if itemKey == '详细区域':
@@ -147,6 +150,18 @@ class salingInfo:
                 count = self.elementConstant.data_constant.get(tempItemKey)
                 print tempItemKey, self.elementConstant.data_constant.get(tempItemKey), item_valus
                 if tempItemKey != None and count != None:
+                    #todo 检查使用标准,修改使用逻辑
+                    if tempItemKey == '链家编号':
+                        item_valus = item_valus[0:len(item_valus) - 2]
+                    elif tempItemKey == '单价（元/平米）':
+                        item_valus = item_valus[0:len(item_valus) - 4]
+                    elif tempItemKey == '建筑面积：平米':
+                        item_valus = item_valus[0:len(item_valus) - 1]
+                    elif tempItemKey == '建成时间：年':
+                        item_valus = item_valus[0:len(item_valus) - 5]
+                    elif tempItemKey == '关注（人）' or tempItemKey == '看过房源：人':
+                        item_valus = item_valus[0:len(item_valus) - 3]
+
                     self.generate_excle.writeExclePositon(row,
                                                           self.elementConstant.data_constant.get(tempItemKey),
                                                           item_valus)
