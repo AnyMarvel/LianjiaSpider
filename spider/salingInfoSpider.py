@@ -25,7 +25,6 @@ class salingInfo:
         self.infos = {}
         self.proxyServer = ()
         # 传参使用进行excle生成
-        self.list = []
         self.generate_excle = generate_excle()
         self.elementConstant = ElementConstant()
 
@@ -86,50 +85,18 @@ class salingInfo:
             for item in result:
                 if item[0] != u"抵押信息" and item[0] != u"房本备件":
                     self.infos[item[0]] = item[1]
-
-            # self.list = [re_get, self.infos['标题'], self.infos['总价'], self.infos['每平方售价']]
-
-            # todo 计算页数,第一行填充key值,后续填充value值
             row = index + (self.page - 1) * 30
             print 'row:' + str(row)
             if row == 0:
-                # self.list = []
-                # for itemKey in self.infos.keys():
-                #     self.list.append(itemKey)
-                # self.generate_excle.writeExcle(0, self.list)
                 for index_item in self.elementConstant.data_constant.keys():
                     self.generate_excle.writeExclePositon(0, self.elementConstant.data_constant.get(index_item),
                                                           index_item)
 
                 self.wirte_source_data(1)
-                # # todo 修改适配excle格式的内容适配
-                # for itemKey in self.infos.keys():
-                #     print itemKey + ':' + self.infos.get(itemKey)
-                #
-                #     if itemKey == '详细区域':
-                #         item_valus = self.infos.get(itemKey)
-                #         temps_item_valus = item_valus.split()
-                #         print temps_item_valus[0], temps_item_valus[1], temps_item_valus[2]
-                #         self.generate_excle.writeExclePositon(1, self.elementConstant.data_constant.get('所属下辖区'),
-                #                                               temps_item_valus[0])
-                #         self.generate_excle.writeExclePositon(1, self.elementConstant.data_constant.get('所属商圈'),
-                #                                               temps_item_valus[1])
-                #         self.generate_excle.writeExclePositon(1, self.elementConstant.data_constant.get('所属环线'),
-                #                                               temps_item_valus[2])
-                #     else:
-                #
-                #         tempItemKey = self.elementConstant.unit_check_name(itemKey.encode('utf-8'))
-                #         count = self.elementConstant.data_constant.get(tempItemKey)
-                #         print tempItemKey, self.elementConstant.data_constant.get(tempItemKey), itemKey
-                #         if tempItemKey != None and count != None:
-                #             self.generate_excle.writeExclePositon(1,
-                #                                                   self.elementConstant.data_constant.get(tempItemKey),
-                #                                                   itemKey)
 
             else:
                 row = row + 1
                 self.wirte_source_data(row)
-                # print str(self.list)[1:len(str(self.list)) - 1]
         return self.infos
 
     # 封装统一request请求,采取动态代理和动态修改User-Agent方式进行访问设置,减少服务端手动暂停的问题
