@@ -39,7 +39,7 @@ class ElementConstant:
         self.data_constant['所属小区'] = 11
         self.data_constant['所属环线'] = 12
         # 房屋户型 户型
-        self.data_constant['户型'] = 13
+        self.data_constant['房屋户型'] = 13
         # 朝向 朝向
         self.data_constant['朝向'] = 14
         # 梯户比例 梯户比例
@@ -92,21 +92,25 @@ class ElementConstant:
             if temp_data == '上次交易':
                 return '上次交易时间'
             if temp_data == '房子类型':
-                return '建成时间'
+                return '建成时间：年'
             if temp_data == '小区名称':
                 return '所属小区'
             if temp_data == '房屋户型':
                 return '户型'
-            if temp_data == '所在楼层':
-                return '楼层'
+            # if temp_data == '所在楼层':
+            #     return '楼层'
             if temp_data == '关注房源':
                 return '关注（人）'
             if temp_data == '看过房源':
                 return '看过房源：人'
 
     def excleTest(self):
+
         self.generate_excle = generate_excle()
         self.generate_excle.addSheetExcle('testsheet')
         for index in self.data_constant.keys():
             self.generate_excle.writeExclePositon(0, self.data_constant.get(index), index)
         self.generate_excle.saveExcle()
+
+# Element_Constant = ElementConstant()
+# Element_Constant.excleTest()

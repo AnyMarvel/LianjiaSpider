@@ -100,28 +100,32 @@ class salingInfo:
                 for index_item in self.elementConstant.data_constant.keys():
                     self.generate_excle.writeExclePositon(0, self.elementConstant.data_constant.get(index_item),
                                                           index_item)
-                # todo 修改适配excle格式的内容适配
-                for itemKey in self.infos.keys():
-                    if itemKey == '详细区域':
-                        item_valus = self.infos.get(itemKey)
-                        temps_item_valus = str(item_valus).split()
-                        print temps_item_valus[0], temps_item_valus[1], temps_item_valus[2]
-                        # self.generate_excle.writeExclePositon(1, self.elementConstant.data_constant.get('所属下辖区'),
-                        #                                       temps_item_valus[0])
-                        # self.generate_excle.writeExclePositon(1, self.elementConstant.data_constant.get('所属商圈'),
-                        #                                       temps_item_valus[1])
-                        # self.generate_excle.writeExclePositon(1, self.elementConstant.data_constant.get('所属环线'),
-                        #                                       temps_item_valus[2])
-                    else:
 
-                        tempItemKey = self.elementConstant.unit_check_name(itemKey)
-                        print tempItemKey, self.elementConstant.data_constant.get(str(tempItemKey)), itemKey
+                self.wirte_source_data(1)
+                # # todo 修改适配excle格式的内容适配
+                # for itemKey in self.infos.keys():
+                #     print itemKey + ':' + self.infos.get(itemKey)
+                #
+                #     if itemKey == '详细区域':
+                #         item_valus = self.infos.get(itemKey)
+                #         temps_item_valus = item_valus.split()
+                #         print temps_item_valus[0], temps_item_valus[1], temps_item_valus[2]
+                #         self.generate_excle.writeExclePositon(1, self.elementConstant.data_constant.get('所属下辖区'),
+                #                                               temps_item_valus[0])
+                #         self.generate_excle.writeExclePositon(1, self.elementConstant.data_constant.get('所属商圈'),
+                #                                               temps_item_valus[1])
+                #         self.generate_excle.writeExclePositon(1, self.elementConstant.data_constant.get('所属环线'),
+                #                                               temps_item_valus[2])
+                #     else:
+                #
+                #         tempItemKey = self.elementConstant.unit_check_name(itemKey.encode('utf-8'))
+                #         count = self.elementConstant.data_constant.get(tempItemKey)
+                #         print tempItemKey, self.elementConstant.data_constant.get(tempItemKey), itemKey
+                #         if tempItemKey != None and count != None:
+                #             self.generate_excle.writeExclePositon(1,
+                #                                                   self.elementConstant.data_constant.get(tempItemKey),
+                #                                                   itemKey)
 
-                        # self.generate_excle.writeExclePositon(1,
-                        #                                       str(self.elementConstant.data_constant.get(tempItemKey)),
-                        #                                       itemKey)
-
-                        # self.wirte_source_data(1)
             else:
                 row = row + 1
                 self.wirte_source_data(row)
@@ -157,14 +161,28 @@ class salingInfo:
 
     # 源数据生成,写入excle中,从infos字典中读取数据,放置到list列表中进行写入操作,其中可修改规定写入格式
     def wirte_source_data(self, row):
-        self.list = []
         for itemKey in self.infos.keys():
-            if str(itemKey) == '每平方售价':
-                item_value = self.infos.get(itemKey)[0:self.infos.get(itemKey).index('元')]
+            print itemKey + ':' + self.infos.get(itemKey)
+
+            item_valus = self.infos.get(itemKey)
+            if itemKey == '详细区域':
+                temps_item_valus = item_valus.split()
+                print temps_item_valus[0], temps_item_valus[1], temps_item_valus[2]
+                self.generate_excle.writeExclePositon(row, self.elementConstant.data_constant.get('所属下辖区'),
+                                                      temps_item_valus[0])
+                self.generate_excle.writeExclePositon(row, self.elementConstant.data_constant.get('所属商圈'),
+                                                      temps_item_valus[1])
+                self.generate_excle.writeExclePositon(row, self.elementConstant.data_constant.get('所属环线'),
+                                                      temps_item_valus[2])
             else:
-                item_value = self.infos.get(itemKey)
-            self.list.append(item_value)
-        self.generate_excle.writeExcle(row, self.list)
+
+                tempItemKey = self.elementConstant.unit_check_name(itemKey.encode('utf-8'))
+                count = self.elementConstant.data_constant.get(tempItemKey)
+                print tempItemKey, self.elementConstant.data_constant.get(tempItemKey), item_valus
+                if tempItemKey != None and count != None:
+                    self.generate_excle.writeExclePositon(row,
+                                                          self.elementConstant.data_constant.get(tempItemKey),
+                                                          item_valus)
 
 
 spider = salingInfo()
