@@ -150,7 +150,7 @@ class salingInfo:
                 count = self.elementConstant.data_constant.get(tempItemKey)
                 print tempItemKey, self.elementConstant.data_constant.get(tempItemKey), item_valus
                 if tempItemKey != None and count != None:
-                    #todo 检查使用标准,修改使用逻辑
+                    # todo 检查使用标准,修改使用逻辑
                     if tempItemKey == '链家编号':
                         item_valus = item_valus[0:len(item_valus) - 2]
                     elif tempItemKey == '单价（元/平米）':
@@ -158,9 +158,13 @@ class salingInfo:
                     elif tempItemKey == '建筑面积：平米':
                         item_valus = item_valus[0:len(item_valus) - 1]
                     elif tempItemKey == '建成时间：年':
-                        item_valus = item_valus[0:len(item_valus) - 5]
+                        item_valus = item_valus[0:item_valus.index('年')]
                     elif tempItemKey == '关注（人）' or tempItemKey == '看过房源：人':
                         item_valus = item_valus[0:len(item_valus) - 3]
+                    elif tempItemKey == '挂牌时间':
+                        item_valus = item_valus.replace('-', '/')
+                    elif tempItemKey == '上次交易时间':
+                        item_valus = item_valus.replace('-', '/')
 
                     self.generate_excle.writeExclePositon(row,
                                                           self.elementConstant.data_constant.get(tempItemKey),
