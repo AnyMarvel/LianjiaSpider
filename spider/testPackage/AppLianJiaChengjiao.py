@@ -1,5 +1,8 @@
 # encoding:utf-8
 import requests
+import cookielib
+
+cookieJar = cookielib.CookieJar()
 
 postparmar = {'mobile_phone_no': '18410091865', 'password': '52shanshan', 'request_ts': '1511162802'}
 dns = {'User-Agent': 'HomeLink8.2.1;generic Custom+Phone+-+5.0.0+-+API+21+-+768x1280; Android 5.0'}
@@ -12,16 +15,16 @@ headers = {
     'Lianjia-Channel': 'Android_Anzhi',
     'Lianjia-Device-Id': '6fc5da9bec827948',
     'Lianjia-Version': '8.2.1',
-    'Authorization': 'MjAxNzAzMjRfYW5kcm9pZDo4MzIwY2QwNDQ2YzFlODQ0NjI3ZDU3NDJjNTc3YWZkNWQ5NjM4Zjk5',
+    'Authorization': 'MjAxNzAzMjRfYW5kcm9pZDpmYjQxYWI4ZmI5NDMyOWE0MWE5ZmU2ZjQ3Mzg2YjQ1N2FhMzg3ZTQ4',
     'Lianjia-Im-Version': '2.4.4',
     'Host': 'app.api.lianjia.com',
     'Connection': 'Keep-Alive',
     'Accept-Encoding': 'gzip'
-
 }
 
 result = requests.get(
-    'https://app.api.lianjia.com/house/chengjiao/search?city_id=110000&limit_offset=0&limit_count=20&request_ts=1511162899',
+    # 'https://app.api.lianjia.com/house/chengjiao/search?city_id=110000&limit_offset=20&limit_count=20&request_ts=1511170093',
+    'https://app.api.lianjia.com/house/chengjiao/search?city_id=110000&limit_offset=0&limit_count=10&request_ts=1511232061',
     headers=headers)
 
-print result.status_code, result.text
+print result.text
