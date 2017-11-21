@@ -4,8 +4,6 @@ import cookielib
 
 cookieJar = cookielib.CookieJar()
 
-postparmar = {'mobile_phone_no': '18410091865', 'password': '52shanshan', 'request_ts': '1511162802'}
-dns = {'User-Agent': 'HomeLink8.2.1;generic Custom+Phone+-+5.0.0+-+API+21+-+768x1280; Android 5.0'}
 headers = {
     'Page-Schema': 'tradedSearch%2Flist',
     'Referer': 'homepage%3F',

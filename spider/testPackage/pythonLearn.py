@@ -13,6 +13,7 @@
 
 import base64
 import hashlib
+import time
 
 str = '93273ef46a0b880faf4466c48f74878fcity_id=110000limit_count=10limit_offset=0request_ts=1511232061'
 
@@ -21,3 +22,5 @@ sha1 = hashlib.sha1(str).hexdigest()
 temp = '20170324_android:' + sha1
 
 print base64.b64encode(temp)
+# 打印当前时间
+print int(time.time())
