@@ -8,11 +8,10 @@ from cheng_jiao_data_analysis import cheng_jiao_data_analysis
 import sys
 
 
-
 class chengJiao:
     def __init__(self):
         # 爬取页数
-        self.count = 1
+        self.count = 5
         # 一页一共多少数据
         self.limit_count = 10
         # 第几页（页数*一页一共多少数据）
@@ -83,7 +82,7 @@ class chengJiao:
             product_json = json.loads(result_product.text, encoding='utf-8')
             self.cheng_jiao_data_analysis.chengjiao_product(product_json['data'])
 
-            #获取更多
+            # 获取更多
             self.request_ts = int(time.time())
             chengjiao_pruduct_more_authorization = '93273ef46a0b880faf4466c48f74878fhouse_code=' + str(
                 i['house_code']) + 'request_ts=' + str(self.request_ts)
@@ -93,10 +92,13 @@ class chengJiao:
             chengjiao_more_url = 'https://app.api.lianjia.com/house/house/moreinfo?house_code=' + str(
                 i['house_code']) + '&request_ts=' + str(self.request_ts)
 
-            result_product = requests.get(chengjiao_more_url, headers=self.headers)
-            print result_product.text
+            result_product_more = requests.get(chengjiao_more_url, headers=self.headers)
 
+            product_json_more = json.loads(result_product_more.text, encoding='utf-8')
 
+            self.cheng_jiao_data_analysis.chengjiao_more_infos(product_json_more)
+
+            # print result_product_more.text
 
 
             # print product_json['data']

@@ -29,13 +29,35 @@ class cheng_jiao_data_analysis:
 
         basic_list_data = json['basic_list']
         for item in basic_list_data:
-            self.er_shou_product_entity[str(item['name'])] = str(item['value'])
+            if item.get('name') is not None and item.get('value') is not None:
+                self.er_shou_product_entity[str(item['name'])] = str(item['value'])
 
-        info_list_data = json['info_list']
-        for item in info_list_data:
-            self.er_shou_product_entity[item['name']] = str(item['value'])
+        info_list_data = json.get('info_list')
+        if info_list_data is not None:
+            for item in info_list_data:
+                if item.get('name') is not None and item.get('value') is not None:
+                    self.er_shou_product_entity[item['name']] = str(item['value'])
 
-        print self.er_shou_product_entity
+        # 位置
+        location_info = json['location']
+        self.er_shou_product_entity['location'] = str(location_info['title'])
+        # 本房成交信息回顾
+        deal_info = json['deal_info']['review']['list']
+        for item in deal_info:
+            if item.get('name') is not None and item.get('value') is not None:
+                self.er_shou_product_entity[item['name']] = str(item['value'])
+        # 历史成交 先判断是否有历史成交记录
+        history_info = json.get('history')
+        if history_info is not None:
+            self.er_shou_product_entity[history_info['name']] = str(history_info['list'])
+            # print self.er_shou_product_entity
 
     def chengjiao_more_infos(self, json):
-        pass
+        base_list_info = json['data']['list']
+        for item in base_list_info:
+            for children_item in item['list']:
+                if children_item.get('name') is not None and children_item.get('value') is not None:
+                    self.er_shou_product_entity[children_item['name']] = str(children_item['value'])
+
+        for item in self.er_shou_product_entity.keys():
+            print item + ":" + self.er_shou_product_entity.get(item)
