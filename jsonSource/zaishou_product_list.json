@@ -1,0 +1,2613 @@
+{
+  "request_id": "87361249871c92b81a84b99a3e1753e0",
+  "errno": 0,
+  "error": "",
+  "data": {
+    "total_count": 26999,
+    "return_count": 20,
+    "has_more_data": 1,
+    "list": [
+      {
+        "house_code": "101102233336",
+        "title": "明光村小区带电梯朝南精装一居室",
+        "desc": "1室1厅\/45.6㎡\/南\/明光村小区",
+        "price_str": "380",
+        "price_unit": "万",
+        "unit_price_str": "83,334元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/b152316c-6c6f-48ed-9a4d-ecfbe267c27d.jpg.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "随时看房",
+            "color": "33be85"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": false,
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "380万"
+          },
+          {
+            "name": "房型",
+            "value": "1室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "45.6㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "83334元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.10.25"
+          },
+          {
+            "name": "朝向：",
+            "value": "南"
+          },
+          {
+            "name": "楼层：",
+            "value": "低楼层\/18层"
+          },
+          {
+            "name": "楼型：",
+            "value": "塔楼"
+          },
+          {
+            "name": "电梯：",
+            "value": "有"
+          },
+          {
+            "name": "装修：",
+            "value": "精装"
+          },
+          {
+            "name": "年代：",
+            "value": "1990年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "商品房"
+          }
+        ],
+        "community_name": "明光村小区",
+        "baidu_la": 39.962265,
+        "baidu_lo": 116.359841,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 1,
+        "area": 45.6,
+        "price": 3800000,
+        "unit_price": 83334,
+        "strategy_id": "default_page_itemcf_1"
+      },
+      {
+        "house_code": "101102075015",
+        "title": "电梯2居室 景观房 房本满五 花园位置 诚心出售！",
+        "desc": "2室1厅\/103.64㎡\/东南\/天通苑中苑",
+        "price_str": "382",
+        "price_unit": "万",
+        "unit_price_str": "36,859元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/a708cd5e-448b-4ab1-931c-8206f55dde0b.JPG.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满五年",
+            "color": "ff8062"
+          },
+          {
+            "desc": "随时看房",
+            "color": "33be85"
+          },
+          {
+            "desc": "房主自荐",
+            "color": "f2a12f"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": true,
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "382万"
+          },
+          {
+            "name": "房型",
+            "value": "2室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "103.64㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "36859元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.09.13"
+          },
+          {
+            "name": "朝向：",
+            "value": "东南"
+          },
+          {
+            "name": "楼层：",
+            "value": "高楼层\/20层"
+          },
+          {
+            "name": "楼型：",
+            "value": "塔楼"
+          },
+          {
+            "name": "电梯：",
+            "value": "有"
+          },
+          {
+            "name": "装修：",
+            "value": "简装"
+          },
+          {
+            "name": "年代：",
+            "value": "2008年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "一类经济适用房"
+          }
+        ],
+        "community_name": "天通苑中苑",
+        "baidu_la": 40.077562,
+        "baidu_lo": 116.432684,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 2,
+        "area": 103.64,
+        "price": 3820000,
+        "unit_price": 36859,
+        "strategy_id": "default_page_nearbyresblocks_1"
+      },
+      {
+        "house_code": "101102230008",
+        "title": "明光村小区南向一居室 高楼层采光好",
+        "desc": "1室1厅\/46.8㎡\/南 北\/明光村小区",
+        "price_str": "396",
+        "price_unit": "万",
+        "unit_price_str": "84,616元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/899e27ec-080d-473c-9510-59f0817d73d2.jpg.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满五年",
+            "color": "ff8062"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": false,
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "396万"
+          },
+          {
+            "name": "房型",
+            "value": "1室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "46.8㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "84616元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.10.24"
+          },
+          {
+            "name": "朝向：",
+            "value": "南 北"
+          },
+          {
+            "name": "楼层：",
+            "value": "顶层\/5层"
+          },
+          {
+            "name": "楼型：",
+            "value": "板楼"
+          },
+          {
+            "name": "电梯：",
+            "value": "无"
+          },
+          {
+            "name": "装修：",
+            "value": "简装"
+          },
+          {
+            "name": "年代：",
+            "value": "1995年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "已购公房"
+          }
+        ],
+        "community_name": "明光村小区",
+        "baidu_la": 39.962265,
+        "baidu_lo": 116.359841,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 1,
+        "area": 46.8,
+        "price": 3960000,
+        "unit_price": 84616,
+        "strategy_id": "default_page_sameresblock_1"
+      },
+      {
+        "house_code": "101102011908",
+        "title": "距离8号线回龙观东大街站775米 精装修 低楼层",
+        "desc": "2室1厅\/61.08㎡\/南 北\/华龙苑中里",
+        "price_str": "340",
+        "price_unit": "万",
+        "unit_price_str": "55,665元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/x-se\/hdic-frame\/d65707b5-109f-40ed-b5ce-5be7a3c2147e.png.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满五年",
+            "color": "ff8062"
+          },
+          {
+            "desc": "地铁",
+            "color": "59abfd"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": false,
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "340万"
+          },
+          {
+            "name": "房型",
+            "value": "2室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "61.08㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "55665元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.08.30"
+          },
+          {
+            "name": "朝向：",
+            "value": "南 北"
+          },
+          {
+            "name": "楼层：",
+            "value": "底层\/6层"
+          },
+          {
+            "name": "楼型：",
+            "value": "板楼"
+          },
+          {
+            "name": "电梯：",
+            "value": "无"
+          },
+          {
+            "name": "装修：",
+            "value": "精装"
+          },
+          {
+            "name": "年代：",
+            "value": "1993年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "已购公房"
+          }
+        ],
+        "community_name": "华龙苑中里",
+        "baidu_la": 40.084133,
+        "baidu_lo": 116.376025,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 2,
+        "area": 61.08,
+        "price": 3400000,
+        "unit_price": 55665,
+        "strategy_id": "default_page_itemcf_1"
+      },
+      {
+        "house_code": "101102200677",
+        "title": "明光村小区 南北通透一居室 中间楼层 业主诚心出售",
+        "desc": "1室1厅\/46.8㎡\/南 北\/明光村小区",
+        "price_str": "390",
+        "price_unit": "万",
+        "unit_price_str": "83,334元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/f98421d8-0e7b-4e31-882f-3844eb3db10a.jpg.280x210.jpg",
+        "card_type": "house",
+        "is_focus": false,
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "390万"
+          },
+          {
+            "name": "房型",
+            "value": "1室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "46.8㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "83334元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.10.17"
+          },
+          {
+            "name": "朝向：",
+            "value": "南 北"
+          },
+          {
+            "name": "楼层：",
+            "value": "中楼层\/5层"
+          },
+          {
+            "name": "楼型：",
+            "value": "板楼"
+          },
+          {
+            "name": "电梯：",
+            "value": "无"
+          },
+          {
+            "name": "装修：",
+            "value": "简装"
+          },
+          {
+            "name": "年代：",
+            "value": "1995年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "商品房"
+          }
+        ],
+        "community_name": "明光村小区",
+        "baidu_la": 39.962265,
+        "baidu_lo": 116.359841,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 1,
+        "area": 46.8,
+        "price": 3900000,
+        "unit_price": 83334,
+        "strategy_id": "default_page_sameresblock_1"
+      },
+      {
+        "house_code": "101102247168",
+        "title": "商品房满五家庭一套，好楼层，精装修，看房方便",
+        "desc": "2室1厅\/73.69㎡\/南 北\/华龙苑南里",
+        "price_str": "370",
+        "price_unit": "万",
+        "unit_price_str": "50,211元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/600f7b66-468c-4471-829d-82da4d122f14.jpg.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满五年",
+            "color": "ff8062"
+          },
+          {
+            "desc": "地铁",
+            "color": "59abfd"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": false,
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "370万"
+          },
+          {
+            "name": "房型",
+            "value": "2室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "73.69㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "50211元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.10.29"
+          },
+          {
+            "name": "朝向：",
+            "value": "南 北"
+          },
+          {
+            "name": "楼层：",
+            "value": "中楼层\/6层"
+          },
+          {
+            "name": "楼型：",
+            "value": "板楼"
+          },
+          {
+            "name": "电梯：",
+            "value": "无"
+          },
+          {
+            "name": "装修：",
+            "value": "精装"
+          },
+          {
+            "name": "年代：",
+            "value": "1995年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "商品房"
+          }
+        ],
+        "community_name": "华龙苑南里",
+        "baidu_la": 40.080111,
+        "baidu_lo": 116.372841,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 2,
+        "area": 73.69,
+        "price": 3700000,
+        "unit_price": 50211,
+        "strategy_id": "default_page_itemcf_1"
+      },
+      {
+        "house_code": "101101903913",
+        "title": "明光村南北通透一居室 95年的板楼 中间单元中间楼层",
+        "desc": "1室1厅\/46.9㎡\/南\/明光村小区",
+        "price_str": "390",
+        "price_unit": "万",
+        "unit_price_str": "83,156元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/61bc20b5-7b86-4dde-b8b8-2499c11c6ff1.jpg.280x210.jpg",
+        "card_type": "house",
+        "is_focus": false,
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "390万"
+          },
+          {
+            "name": "房型",
+            "value": "1室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "46.9㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "83156元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.08.04"
+          },
+          {
+            "name": "朝向：",
+            "value": "南"
+          },
+          {
+            "name": "楼层：",
+            "value": "中楼层\/5层"
+          },
+          {
+            "name": "楼型：",
+            "value": "板楼"
+          },
+          {
+            "name": "电梯：",
+            "value": "无"
+          },
+          {
+            "name": "装修：",
+            "value": "精装"
+          },
+          {
+            "name": "年代：",
+            "value": "1995年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "商品房"
+          }
+        ],
+        "community_name": "明光村小区",
+        "baidu_la": 39.962265,
+        "baidu_lo": 116.359841,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 1,
+        "area": 46.9,
+        "price": 3900000,
+        "unit_price": 83156,
+        "strategy_id": "default_page_sameresblock_1"
+      },
+      {
+        "house_code": "101102055046",
+        "title": "中苑南北双卫2居室中楼层诚意出售",
+        "desc": "2室1厅\/108.83㎡\/南 北\/天通苑中苑",
+        "price_str": "436",
+        "price_unit": "万",
+        "unit_price_str": "40,063元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/72c8bf06-b678-41a3-bab4-084b3dd9a2ef.JPG.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满五年",
+            "color": "ff8062"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": true,
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "436万"
+          },
+          {
+            "name": "房型",
+            "value": "2室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "108.83㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "40063元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.09.08"
+          },
+          {
+            "name": "朝向：",
+            "value": "南 北"
+          },
+          {
+            "name": "楼层：",
+            "value": "中楼层\/6层"
+          },
+          {
+            "name": "楼型：",
+            "value": "板楼"
+          },
+          {
+            "name": "电梯：",
+            "value": "无"
+          },
+          {
+            "name": "装修：",
+            "value": "精装"
+          },
+          {
+            "name": "年代：",
+            "value": "2007年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "一类经济适用房"
+          }
+        ],
+        "community_name": "天通苑中苑",
+        "baidu_la": 40.077562,
+        "baidu_lo": 116.432684,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 2,
+        "area": 108.83,
+        "price": 4360000,
+        "unit_price": 40063,
+        "strategy_id": "default_page_nearbyresblocks_1"
+      },
+      {
+        "house_code": "101102318924",
+        "title": "西直门明光村+诚心在售房源+精装修+可看房+免征个税",
+        "desc": "2室1厅\/50.7㎡\/南 北\/明光村小区",
+        "price_str": "428",
+        "price_unit": "万",
+        "unit_price_str": "84,419元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/homepageimg\/1490190291phpfo1bOJ.png.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满五年",
+            "color": "ff8062"
+          },
+          {
+            "desc": "新上房源",
+            "color": "4bc845"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": false,
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "428万"
+          },
+          {
+            "name": "房型",
+            "value": "2室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "50.7㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "84419元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.11.18"
+          },
+          {
+            "name": "朝向：",
+            "value": "南 北"
+          },
+          {
+            "name": "楼层：",
+            "value": "底层\/5层"
+          },
+          {
+            "name": "楼型：",
+            "value": "板楼"
+          },
+          {
+            "name": "电梯：",
+            "value": "无"
+          },
+          {
+            "name": "装修：",
+            "value": "精装"
+          },
+          {
+            "name": "年代：",
+            "value": "1986年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "商品房"
+          }
+        ],
+        "community_name": "明光村小区",
+        "baidu_la": 39.962265,
+        "baidu_lo": 116.359841,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 2,
+        "area": 50.7,
+        "price": 4280000,
+        "unit_price": 84419,
+        "strategy_id": "default_page_sameresblock_1"
+      },
+      {
+        "house_code": "101102238637",
+        "title": "北苑家园茉藜园 1室1厅 385万",
+        "desc": "1室1厅\/65.82㎡\/东南\/北苑家园茉藜园",
+        "price_str": "385",
+        "price_unit": "万",
+        "unit_price_str": "58,493元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/d67379aa-5f79-437f-9ef6-6f0e923f8282.jpg.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满两年",
+            "color": "39becd"
+          },
+          {
+            "desc": "随时看房",
+            "color": "33be85"
+          },
+          {
+            "desc": "房主自荐",
+            "color": "f2a12f"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": false,
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "385万"
+          },
+          {
+            "name": "房型",
+            "value": "1室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "65.82㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "58493元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.10.27"
+          },
+          {
+            "name": "朝向：",
+            "value": "东南"
+          },
+          {
+            "name": "楼层：",
+            "value": "中楼层\/26层"
+          },
+          {
+            "name": "楼型：",
+            "value": "塔楼"
+          },
+          {
+            "name": "电梯：",
+            "value": "有"
+          },
+          {
+            "name": "装修：",
+            "value": "精装"
+          },
+          {
+            "name": "年代：",
+            "value": "2004年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "商品房"
+          }
+        ],
+        "community_name": "北苑家园茉藜园",
+        "baidu_la": 40.045549,
+        "baidu_lo": 116.430562,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 1,
+        "area": 65.82,
+        "price": 3850000,
+        "unit_price": 58493,
+        "strategy_id": "default_page_nearbyresblocks_1"
+      },
+      {
+        "house_code": "101102305056",
+        "title": "格兰晴天板楼中间层全明格局满五年业主在京无其他房产",
+        "desc": "2室2厅\/90.39㎡\/南 北\/格兰晴天",
+        "price_str": "438",
+        "price_unit": "万",
+        "unit_price_str": "48,457元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/9a32ef2b-02fb-41e3-adc9-d201604b77e6.jpg.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满五年",
+            "color": "ff8062"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": false,
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "438万"
+          },
+          {
+            "name": "房型",
+            "value": "2室2厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "90.39㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "48457元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.11.14"
+          },
+          {
+            "name": "朝向：",
+            "value": "南 北"
+          },
+          {
+            "name": "楼层：",
+            "value": "中楼层\/6层"
+          },
+          {
+            "name": "楼型：",
+            "value": "板楼"
+          },
+          {
+            "name": "电梯：",
+            "value": "无"
+          },
+          {
+            "name": "装修：",
+            "value": "精装"
+          },
+          {
+            "name": "年代：",
+            "value": "2004年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "私产"
+          }
+        ],
+        "community_name": "格兰晴天",
+        "baidu_la": 39.895417,
+        "baidu_lo": 116.679562,
+        "blueprint_hall_num": 2,
+        "blueprint_bedroom_num": 2,
+        "area": 90.39,
+        "price": 4380000,
+        "unit_price": 48457
+      },
+      {
+        "house_code": "101102312055",
+        "title": "满五年唯一   正规大三居   双卧朝南",
+        "desc": "3室1厅\/103.42㎡\/南 北\/石园北区",
+        "price_str": "390",
+        "price_unit": "万",
+        "unit_price_str": "37,711元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/7c5caa68-82bc-4595-aca1-34a903ad4ea1.jpg.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满五年",
+            "color": "ff8062"
+          },
+          {
+            "desc": "随时看房",
+            "color": "33be85"
+          },
+          {
+            "desc": "新上房源",
+            "color": "4bc845"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": false,
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "390万"
+          },
+          {
+            "name": "房型",
+            "value": "3室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "103.42㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "37711元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.11.16"
+          },
+          {
+            "name": "朝向：",
+            "value": "南 北"
+          },
+          {
+            "name": "楼层：",
+            "value": "中楼层\/6层"
+          },
+          {
+            "name": "楼型：",
+            "value": "板楼"
+          },
+          {
+            "name": "电梯：",
+            "value": "无"
+          },
+          {
+            "name": "装修：",
+            "value": "简装"
+          },
+          {
+            "name": "年代：",
+            "value": "1997年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "私产"
+          }
+        ],
+        "community_name": "石园北区",
+        "baidu_la": 40.118729,
+        "baidu_lo": 116.670101,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 3,
+        "area": 103.42,
+        "price": 3900000,
+        "unit_price": 37711
+      },
+      {
+        "house_code": "101102263512",
+        "title": "二里庄  带电梯  东南三居  采光充足  看房方便",
+        "desc": "3室1厅\/86.9㎡\/东南\/二里庄小区",
+        "price_str": "730",
+        "price_unit": "万",
+        "unit_price_str": "84,005元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/841d738d-e294-40be-a4ac-6045b6edc8ca.jpg.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满五年",
+            "color": "ff8062"
+          },
+          {
+            "desc": "随时看房",
+            "color": "33be85"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": false,
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "730万"
+          },
+          {
+            "name": "房型",
+            "value": "3室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "86.9㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "84005元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.11.02"
+          },
+          {
+            "name": "朝向：",
+            "value": "东南"
+          },
+          {
+            "name": "楼层：",
+            "value": "中楼层\/18层"
+          },
+          {
+            "name": "楼型：",
+            "value": "塔楼"
+          },
+          {
+            "name": "电梯：",
+            "value": "有"
+          },
+          {
+            "name": "装修：",
+            "value": "简装"
+          },
+          {
+            "name": "年代：",
+            "value": "1994年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "央产房"
+          }
+        ],
+        "community_name": "二里庄小区",
+        "baidu_la": 40.002169,
+        "baidu_lo": 116.371677,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 3,
+        "area": 86.9,
+        "price": 7300000,
+        "unit_price": 84005
+      },
+      {
+        "house_code": "101102293668",
+        "title": "旗胜家园 2室1厅 370万",
+        "desc": "2室1厅\/89.81㎡\/南 北\/旗胜家园",
+        "price_str": "370",
+        "price_unit": "万",
+        "unit_price_str": "41,199元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/2253e091-9876-4b1f-934d-a1a3be9bae56.jpg.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满五年",
+            "color": "ff8062"
+          },
+          {
+            "desc": "随时看房",
+            "color": "33be85"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": false,
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "370万"
+          },
+          {
+            "name": "房型",
+            "value": "2室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "89.81㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "41199元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.11.11"
+          },
+          {
+            "name": "朝向：",
+            "value": "南 北"
+          },
+          {
+            "name": "楼层：",
+            "value": "底层\/21层"
+          },
+          {
+            "name": "楼型：",
+            "value": "板塔结合"
+          },
+          {
+            "name": "电梯：",
+            "value": "有"
+          },
+          {
+            "name": "装修：",
+            "value": "简装"
+          },
+          {
+            "name": "年代：",
+            "value": "2009年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "限价商品房"
+          }
+        ],
+        "community_name": "旗胜家园",
+        "baidu_la": 40.073376,
+        "baidu_lo": 116.364975,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 2,
+        "area": 89.81,
+        "price": 3700000,
+        "unit_price": 41199
+      },
+      {
+        "house_code": "101102293686",
+        "title": "东坝奥园四期精装三居 满五唯一 南北通透 看房方便",
+        "desc": "3室2厅\/139.31㎡\/南 北\/奥林匹克花园四期",
+        "price_str": "860",
+        "price_unit": "万",
+        "unit_price_str": "61,733元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/fbacb4c3-c49a-49e9-9b1a-50b671334460.jpg.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满五年",
+            "color": "ff8062"
+          },
+          {
+            "desc": "随时看房",
+            "color": "33be85"
+          },
+          {
+            "desc": "房主自荐",
+            "color": "f2a12f"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": false,
+        "feature_word": "房主自荐",
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "860万"
+          },
+          {
+            "name": "房型",
+            "value": "3室2厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "139.31㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "61733元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.11.11"
+          },
+          {
+            "name": "朝向：",
+            "value": "南 北"
+          },
+          {
+            "name": "楼层：",
+            "value": "低楼层\/10层"
+          },
+          {
+            "name": "楼型：",
+            "value": "板楼"
+          },
+          {
+            "name": "电梯：",
+            "value": "有"
+          },
+          {
+            "name": "装修：",
+            "value": "精装"
+          },
+          {
+            "name": "年代：",
+            "value": "2009年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "商品房"
+          }
+        ],
+        "community_name": "奥林匹克花园四期",
+        "baidu_la": 39.964593,
+        "baidu_lo": 116.548497,
+        "blueprint_hall_num": 2,
+        "blueprint_bedroom_num": 3,
+        "area": 139.31,
+        "price": 8600000,
+        "unit_price": 61733
+      },
+      {
+        "house_code": "101102301598",
+        "title": "三里河路5号院 3室1厅 763万",
+        "desc": "3室1厅\/76.38㎡\/南 北\/三里河路5号院",
+        "price_str": "763",
+        "price_unit": "万",
+        "unit_price_str": "99,896元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/4f8050ad-f22d-4b26-9fe0-7febeff5784d.jpg.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满五年",
+            "color": "ff8062"
+          },
+          {
+            "desc": "随时看房",
+            "color": "33be85"
+          },
+          {
+            "desc": "地铁",
+            "color": "59abfd"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": false,
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "763万"
+          },
+          {
+            "name": "房型",
+            "value": "3室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "76.38㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "99896元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.11.13"
+          },
+          {
+            "name": "朝向：",
+            "value": "南 北"
+          },
+          {
+            "name": "楼层：",
+            "value": "中楼层\/18层"
+          },
+          {
+            "name": "楼型：",
+            "value": "板塔结合"
+          },
+          {
+            "name": "电梯：",
+            "value": "有"
+          },
+          {
+            "name": "装修：",
+            "value": "简装"
+          },
+          {
+            "name": "年代：",
+            "value": "1990年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "央产房"
+          }
+        ],
+        "community_name": "三里河路5号院",
+        "baidu_la": 39.940908,
+        "baidu_lo": 116.3364,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 3,
+        "area": 76.38,
+        "price": 7630000,
+        "unit_price": 99896
+      },
+      {
+        "house_code": "101102280717",
+        "title": "商品房满五年业主在京一套住房，全朝南主卧带落地阳台",
+        "desc": "2室1厅\/92.36㎡\/南\/天通西苑二区",
+        "price_str": "390",
+        "price_unit": "万",
+        "unit_price_str": "42,227元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/3285dc1f-0f91-49cb-a4eb-13df6025be08.jpg.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满五年",
+            "color": "ff8062"
+          },
+          {
+            "desc": "随时看房",
+            "color": "33be85"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": false,
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "390万"
+          },
+          {
+            "name": "房型",
+            "value": "2室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "92.36㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "42227元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.11.07"
+          },
+          {
+            "name": "朝向：",
+            "value": "南"
+          },
+          {
+            "name": "楼层：",
+            "value": "低楼层\/32层"
+          },
+          {
+            "name": "楼型：",
+            "value": "塔楼"
+          },
+          {
+            "name": "电梯：",
+            "value": "有"
+          },
+          {
+            "name": "装修：",
+            "value": "精装"
+          },
+          {
+            "name": "年代：",
+            "value": "2003年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "商品房"
+          }
+        ],
+        "community_name": "天通西苑二区",
+        "baidu_la": 40.077796,
+        "baidu_lo": 116.415742,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 2,
+        "area": 92.36,
+        "price": 3900000,
+        "unit_price": 42227
+      },
+      {
+        "house_code": "101102285689",
+        "title": "龙旗广场西南向两居室，看房方便，诚心出售",
+        "desc": "2室1厅\/72.13㎡\/西南\/龙旗广场",
+        "price_str": "330",
+        "price_unit": "万",
+        "unit_price_str": "45,751元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/e1d9c33b-3ad6-4f3c-9d6f-135d626d7291.jpg.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满五年",
+            "color": "ff8062"
+          },
+          {
+            "desc": "随时看房",
+            "color": "33be85"
+          },
+          {
+            "desc": "地铁",
+            "color": "59abfd"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": false,
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "330万"
+          },
+          {
+            "name": "房型",
+            "value": "2室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "72.13㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "45751元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.11.09"
+          },
+          {
+            "name": "朝向：",
+            "value": "西南"
+          },
+          {
+            "name": "楼层：",
+            "value": "中楼层\/28层"
+          },
+          {
+            "name": "楼型：",
+            "value": "板塔结合"
+          },
+          {
+            "name": "电梯：",
+            "value": "有"
+          },
+          {
+            "name": "装修：",
+            "value": "简装"
+          },
+          {
+            "name": "年代：",
+            "value": "2010年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "限价商品房"
+          }
+        ],
+        "community_name": "龙旗广场",
+        "baidu_la": 40.073392,
+        "baidu_lo": 116.354203,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 2,
+        "area": 72.13,
+        "price": 3300000,
+        "unit_price": 45751
+      },
+      {
+        "house_code": "101102282429",
+        "title": "一层可以有小院，商品房满五年，家庭没有其他房产",
+        "desc": "2室1厅\/77.04㎡\/南 北\/龙华园",
+        "price_str": "385",
+        "price_unit": "万",
+        "unit_price_str": "49,975元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/5aeb25c1-478c-4685-907f-a032fd13cd23.jpg.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满五年",
+            "color": "ff8062"
+          },
+          {
+            "desc": "随时看房",
+            "color": "33be85"
+          },
+          {
+            "desc": "房主自荐",
+            "color": "f2a12f"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": false,
+        "feature_word": "房主自荐",
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "385万"
+          },
+          {
+            "name": "房型",
+            "value": "2室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "77.04㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "49975元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.11.08"
+          },
+          {
+            "name": "朝向：",
+            "value": "南 北"
+          },
+          {
+            "name": "楼层：",
+            "value": "底层\/6层"
+          },
+          {
+            "name": "楼型：",
+            "value": "板楼"
+          },
+          {
+            "name": "电梯：",
+            "value": "无"
+          },
+          {
+            "name": "装修：",
+            "value": "简装"
+          },
+          {
+            "name": "年代：",
+            "value": "1996年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "私产"
+          }
+        ],
+        "community_name": "龙华园",
+        "baidu_la": 40.081334,
+        "baidu_lo": 116.332045,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 2,
+        "area": 77.04,
+        "price": 3850000,
+        "unit_price": 49975
+      },
+      {
+        "house_code": "101102313123",
+        "title": "西营前街 正规三居室 新装修 中楼层",
+        "desc": "3室1厅\/87.01㎡\/东 南 北\/西营前街",
+        "price_str": "345",
+        "price_unit": "万",
+        "unit_price_str": "39,651元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/6d5d427d-1b32-40a7-9b2c-67020b42a8c2.jpg.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满五年",
+            "color": "ff8062"
+          },
+          {
+            "desc": "随时看房",
+            "color": "33be85"
+          },
+          {
+            "desc": "房主自荐",
+            "color": "f2a12f"
+          },
+          {
+            "desc": "新上房源",
+            "color": "4bc845"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": false,
+        "feature_word": "房主自荐",
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "345万"
+          },
+          {
+            "name": "房型",
+            "value": "3室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "87.01㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "39651元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.11.17"
+          },
+          {
+            "name": "朝向：",
+            "value": "东 南 北"
+          },
+          {
+            "name": "楼层：",
+            "value": "中楼层\/6层"
+          },
+          {
+            "name": "楼型：",
+            "value": "板楼"
+          },
+          {
+            "name": "电梯：",
+            "value": "无"
+          },
+          {
+            "name": "装修：",
+            "value": "精装"
+          },
+          {
+            "name": "年代：",
+            "value": "1994年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "已购公房"
+          }
+        ],
+        "community_name": "西营前街",
+        "baidu_la": 39.905035,
+        "baidu_lo": 116.672861,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 3,
+        "area": 87.01,
+        "price": 3450000,
+        "unit_price": 39651
+      },
+      {
+        "house_code": "101102043352",
+        "title": "世华泊郡西南北3面采光的3居户型，业主诚意低价出售",
+        "desc": "3室2厅\/130.17㎡\/南 西 北\/世华泊郡",
+        "price_str": "948",
+        "price_unit": "万",
+        "unit_price_str": "72,828元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/7865bbb0-e168-457c-aac6-3183468a1f55.jpg.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满两年",
+            "color": "39becd"
+          },
+          {
+            "desc": "随时看房",
+            "color": "33be85"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": false,
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "948万"
+          },
+          {
+            "name": "房型",
+            "value": "3室2厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "130.17㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "72828元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.09.05"
+          },
+          {
+            "name": "朝向：",
+            "value": "南 西 北"
+          },
+          {
+            "name": "楼层：",
+            "value": "高楼层\/27层"
+          },
+          {
+            "name": "楼型：",
+            "value": "板塔结合"
+          },
+          {
+            "name": "电梯：",
+            "value": "有"
+          },
+          {
+            "name": "装修：",
+            "value": "精装"
+          },
+          {
+            "name": "年代：",
+            "value": "2012年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "商品房"
+          }
+        ],
+        "community_name": "世华泊郡",
+        "baidu_la": 40.05675,
+        "baidu_lo": 116.430966,
+        "blueprint_hall_num": 2,
+        "blueprint_bedroom_num": 3,
+        "area": 130.17,
+        "price": 9480000,
+        "unit_price": 72828
+      },
+      {
+        "house_code": "101102279987",
+        "title": "百万庄南街，高楼层东西向两居，采光无遮挡且楼龄新",
+        "desc": "2室1厅\/59.4㎡\/东西\/百万庄南街",
+        "price_str": "594",
+        "price_unit": "万",
+        "unit_price_str": "100,000元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/8777aa0e-1932-4dab-8626-f1331c66e3d9.jpg.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满五年",
+            "color": "ff8062"
+          },
+          {
+            "desc": "随时看房",
+            "color": "33be85"
+          },
+          {
+            "desc": "房主自荐",
+            "color": "f2a12f"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": true,
+        "feature_word": "房主自荐",
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "594万"
+          },
+          {
+            "name": "房型",
+            "value": "2室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "59.4㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "100000元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.11.07"
+          },
+          {
+            "name": "朝向：",
+            "value": "东 西"
+          },
+          {
+            "name": "楼层：",
+            "value": "顶层\/6层"
+          },
+          {
+            "name": "楼型：",
+            "value": "板楼"
+          },
+          {
+            "name": "电梯：",
+            "value": "无"
+          },
+          {
+            "name": "装修：",
+            "value": "精装"
+          },
+          {
+            "name": "年代：",
+            "value": "1995年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "央产房"
+          }
+        ],
+        "community_name": "百万庄南街",
+        "baidu_la": 39.931157,
+        "baidu_lo": 116.343181,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 2,
+        "area": 59.4,
+        "price": 5940000,
+        "unit_price": 100000
+      },
+      {
+        "house_code": "101102286843",
+        "title": "公主坟 新华社小区  电梯直达 东西通透 满五年唯一",
+        "desc": "2室1厅\/63.06㎡\/东西\/羊坊店路3号院",
+        "price_str": "515",
+        "price_unit": "万",
+        "unit_price_str": "81,669元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/644ea8cd-6395-426b-ad08-bf0a756d330d.jpg.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满五年",
+            "color": "ff8062"
+          },
+          {
+            "desc": "随时看房",
+            "color": "33be85"
+          },
+          {
+            "desc": "房主自荐",
+            "color": "f2a12f"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": true,
+        "feature_word": "房主自荐",
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "515万"
+          },
+          {
+            "name": "房型",
+            "value": "2室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "63.06㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "81669元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.11.09"
+          },
+          {
+            "name": "朝向：",
+            "value": "东 西"
+          },
+          {
+            "name": "楼层：",
+            "value": "中楼层\/18层"
+          },
+          {
+            "name": "楼型：",
+            "value": "塔楼"
+          },
+          {
+            "name": "电梯：",
+            "value": "有"
+          },
+          {
+            "name": "装修：",
+            "value": "简装"
+          },
+          {
+            "name": "年代：",
+            "value": "1990年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "已购公房"
+          }
+        ],
+        "community_name": "羊坊店路3号院",
+        "baidu_la": 39.911238,
+        "baidu_lo": 116.325489,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 2,
+        "area": 63.06,
+        "price": 5150000,
+        "unit_price": 81669
+      },
+      {
+        "house_code": "101102303199",
+        "title": "西直门通透户型 婚房装修 交通便捷 可改三居",
+        "desc": "2室1厅\/58.8㎡\/南 北\/西直门北大街43号院",
+        "price_str": "520",
+        "price_unit": "万",
+        "unit_price_str": "88,436元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/e1217461-33c8-4b41-83dc-bc0b24d2484f.jpg.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满五年",
+            "color": "ff8062"
+          },
+          {
+            "desc": "随时看房",
+            "color": "33be85"
+          },
+          {
+            "desc": "地铁",
+            "color": "59abfd"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": false,
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "520万"
+          },
+          {
+            "name": "房型",
+            "value": "2室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "58.8㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "88436元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.11.14"
+          },
+          {
+            "name": "朝向：",
+            "value": "南 北"
+          },
+          {
+            "name": "楼层：",
+            "value": "高楼层\/6层"
+          },
+          {
+            "name": "楼型：",
+            "value": "板楼"
+          },
+          {
+            "name": "电梯：",
+            "value": "无"
+          },
+          {
+            "name": "装修：",
+            "value": "精装"
+          },
+          {
+            "name": "年代：",
+            "value": "1992年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "已购公房"
+          }
+        ],
+        "community_name": "西直门北大街43号院",
+        "baidu_la": 39.953203,
+        "baidu_lo": 116.361677,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 2,
+        "area": 58.8,
+        "price": 5200000,
+        "unit_price": 88436
+      },
+      {
+        "house_code": "101102299524",
+        "title": "西二区，商品房满5年唯一，厅南、双卧南、精装修",
+        "desc": "2室1厅\/85.57㎡\/南\/天通西苑二区",
+        "price_str": "380",
+        "price_unit": "万",
+        "unit_price_str": "44,409元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/bcb13c54-eba9-4f04-8029-d4a6e7521e3c.JPG.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满五年",
+            "color": "ff8062"
+          },
+          {
+            "desc": "随时看房",
+            "color": "33be85"
+          },
+          {
+            "desc": "房主自荐",
+            "color": "f2a12f"
+          },
+          {
+            "desc": "地铁",
+            "color": "59abfd"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": true,
+        "feature_word": "房主自荐",
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "380万"
+          },
+          {
+            "name": "房型",
+            "value": "2室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "85.57㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "44409元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.11.12"
+          },
+          {
+            "name": "朝向：",
+            "value": "南"
+          },
+          {
+            "name": "楼层：",
+            "value": "高楼层\/18层"
+          },
+          {
+            "name": "楼型：",
+            "value": "板楼"
+          },
+          {
+            "name": "电梯：",
+            "value": "有"
+          },
+          {
+            "name": "装修：",
+            "value": "精装"
+          },
+          {
+            "name": "年代：",
+            "value": "2003年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "商品房"
+          }
+        ],
+        "community_name": "天通西苑二区",
+        "baidu_la": 40.077796,
+        "baidu_lo": 116.415742,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 2,
+        "area": 85.57,
+        "price": 3800000,
+        "unit_price": 44409
+      },
+      {
+        "house_code": "101102252617",
+        "title": "龙禧苑五区 商品房 板楼三层 南北通透",
+        "desc": "2室1厅\/84.89㎡\/南 北\/龙禧苑五区",
+        "price_str": "414",
+        "price_unit": "万",
+        "unit_price_str": "48,769元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/156ff54e-6e71-41a6-abd0-47d894fb8dcc.jpg.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满两年",
+            "color": "39becd"
+          },
+          {
+            "desc": "随时看房",
+            "color": "33be85"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": false,
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "414万"
+          },
+          {
+            "name": "房型",
+            "value": "2室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "84.89㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "48769元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.10.31"
+          },
+          {
+            "name": "朝向：",
+            "value": "南 北"
+          },
+          {
+            "name": "楼层：",
+            "value": "中楼层\/7层"
+          },
+          {
+            "name": "楼型：",
+            "value": "板楼"
+          },
+          {
+            "name": "电梯：",
+            "value": "无"
+          },
+          {
+            "name": "装修：",
+            "value": "简装"
+          },
+          {
+            "name": "年代：",
+            "value": "2002年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "商品房"
+          }
+        ],
+        "community_name": "龙禧苑五区",
+        "baidu_la": 40.087007,
+        "baidu_lo": 116.341467,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 2,
+        "area": 84.89,
+        "price": 4140000,
+        "unit_price": 48769
+      },
+      {
+        "house_code": "101102245746",
+        "title": "中海馥园位置好四居室，中高层，税费少",
+        "desc": "4室1厅\/200.89㎡\/南 北\/中海馥园",
+        "price_str": "2200",
+        "price_unit": "万",
+        "unit_price_str": "109,513元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/a5d4f950-80a0-4c37-b164-6b60af1e2ca7.jpg.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满五年",
+            "color": "ff8062"
+          },
+          {
+            "desc": "随时看房",
+            "color": "33be85"
+          },
+          {
+            "desc": "地铁",
+            "color": "59abfd"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": false,
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "2200万"
+          },
+          {
+            "name": "房型",
+            "value": "4室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "200.89㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "109513元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.10.29"
+          },
+          {
+            "name": "朝向：",
+            "value": "南 北"
+          },
+          {
+            "name": "楼层：",
+            "value": "中楼层\/22层"
+          },
+          {
+            "name": "楼型：",
+            "value": "板塔结合"
+          },
+          {
+            "name": "电梯：",
+            "value": "有"
+          },
+          {
+            "name": "装修：",
+            "value": "简装"
+          },
+          {
+            "name": "年代：",
+            "value": "2003年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "商品房"
+          }
+        ],
+        "community_name": "中海馥园",
+        "baidu_la": 39.934006,
+        "baidu_lo": 116.327941,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 4,
+        "area": 200.89,
+        "price": 22000000,
+        "unit_price": 109513
+      },
+      {
+        "house_code": "101102271770",
+        "title": "中上楼层有电梯  采光视野就是不一样   保利两居",
+        "desc": "2室1厅\/90.38㎡\/南 北\/保利西山林语",
+        "price_str": "470",
+        "price_unit": "万",
+        "unit_price_str": "52,003元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/3d1abb88-6cb3-49c6-83b0-f0325c28663c.jpg.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满五年",
+            "color": "ff8062"
+          },
+          {
+            "desc": "随时看房",
+            "color": "33be85"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": true,
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "470万"
+          },
+          {
+            "name": "房型",
+            "value": "2室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "90.38㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "52003元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.11.05"
+          },
+          {
+            "name": "朝向：",
+            "value": "南 北"
+          },
+          {
+            "name": "楼层：",
+            "value": "中楼层\/8层"
+          },
+          {
+            "name": "楼型：",
+            "value": "板塔结合"
+          },
+          {
+            "name": "电梯：",
+            "value": "有"
+          },
+          {
+            "name": "装修：",
+            "value": "简装"
+          },
+          {
+            "name": "年代：",
+            "value": "2010年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "商品房"
+          }
+        ],
+        "community_name": "保利西山林语",
+        "baidu_la": 40.043636,
+        "baidu_lo": 116.220283,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 2,
+        "area": 90.38,
+        "price": 4700000,
+        "unit_price": 52003
+      },
+      {
+        "house_code": "101101517747",
+        "title": "天畅园两居，业主诚意出售，看房提前联系",
+        "desc": "2室1厅\/103.23㎡\/东\/天畅园",
+        "price_str": "550",
+        "price_unit": "万",
+        "unit_price_str": "53,280元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/66be2e17-d28f-4618-9735-f66ab411acef.jpg.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满五年",
+            "color": "ff8062"
+          },
+          {
+            "desc": "随时看房",
+            "color": "33be85"
+          },
+          {
+            "desc": "地铁",
+            "color": "59abfd"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": false,
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "550万"
+          },
+          {
+            "name": "房型",
+            "value": "2室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "103.23㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "53280元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.04.26"
+          },
+          {
+            "name": "朝向：",
+            "value": "东"
+          },
+          {
+            "name": "楼层：",
+            "value": "中楼层\/32层"
+          },
+          {
+            "name": "楼型：",
+            "value": "塔楼"
+          },
+          {
+            "name": "电梯：",
+            "value": "有"
+          },
+          {
+            "name": "装修：",
+            "value": "精装"
+          },
+          {
+            "name": "年代：",
+            "value": "2008年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "商品房"
+          }
+        ],
+        "community_name": "天畅园",
+        "baidu_la": 40.03926,
+        "baidu_lo": 116.422621,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 2,
+        "area": 103.23,
+        "price": 5500000,
+        "unit_price": 53280
+      },
+      {
+        "house_code": "101102299167",
+        "title": "西单西绒线复式三居  单价低  户型方正 看房随时",
+        "desc": "3室1厅\/130.7㎡\/南 北\/西绒线",
+        "price_str": "1211",
+        "price_unit": "万",
+        "unit_price_str": "92,655元\/平",
+        "cover_pic": "http:\/\/image1.ljcdn.com\/110000-inspection\/11f7e4af-f596-4101-a1ca-da738045b405.jpg.280x210.jpg",
+        "color_tags": [
+          {
+            "desc": "满五年",
+            "color": "ff8062"
+          },
+          {
+            "desc": "随时看房",
+            "color": "33be85"
+          },
+          {
+            "desc": "地铁",
+            "color": "59abfd"
+          }
+        ],
+        "card_type": "house",
+        "is_focus": false,
+        "basic_list": [
+          {
+            "name": "售价",
+            "value": "1211万"
+          },
+          {
+            "name": "房型",
+            "value": "3室1厅"
+          },
+          {
+            "name": "建筑面积",
+            "value": "130.7㎡"
+          }
+        ],
+        "info_list": [
+          {
+            "name": "单价：",
+            "value": "92655元\/平"
+          },
+          {
+            "name": "挂牌：",
+            "value": "2017.11.12"
+          },
+          {
+            "name": "朝向：",
+            "value": "南 北"
+          },
+          {
+            "name": "楼层：",
+            "value": "高楼层\/7层"
+          },
+          {
+            "name": "楼型：",
+            "value": "板楼"
+          },
+          {
+            "name": "电梯：",
+            "value": "无"
+          },
+          {
+            "name": "装修：",
+            "value": "简装"
+          },
+          {
+            "name": "年代：",
+            "value": "2004年"
+          },
+          {
+            "name": "用途：",
+            "value": "普通住宅"
+          },
+          {
+            "name": "权属：",
+            "value": "二类经济适用房"
+          }
+        ],
+        "community_name": "西绒线",
+        "baidu_la": 39.91037,
+        "baidu_lo": 116.386156,
+        "blueprint_hall_num": 1,
+        "blueprint_bedroom_num": 3,
+        "area": 130.7,
+        "price": 12110000,
+        "unit_price": 92655
+      }
+    ],
+    "subscribe": 0,
+    "house_too_few": 0
+  },
+  "cost": 299
+}

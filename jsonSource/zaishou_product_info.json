@@ -1,0 +1,301 @@
+{
+  "request_id": "45d99c1585a543467400057ec24c72de",
+  "errno": 0,
+  "error": "",
+  "data": {
+    "picture_list": [
+      {
+        "img_url_list": [
+          "http:\/\/image1.ljcdn.com\/110000-inspection\/72c8bf06-b678-41a3-bab4-084b3dd9a2ef.JPG.1000x750.jpg",
+          "http:\/\/image1.ljcdn.com\/110000-inspection\/9dbd92cf-a5e3-4c81-891b-d016c395cbb5.JPG.1000x750.jpg"
+        ],
+        "group_name": "客厅",
+        "group_id": 1,
+        "dig_key": "keting"
+      },
+      {
+        "img_url_list": [
+          "http:\/\/image1.ljcdn.com\/x-se\/hdic-frame\/2a4b885c-6644-4d4e-bef8-da543c50eff9.png.1440x1080.jpg"
+        ],
+        "group_name": "户型图",
+        "group_id": 2,
+        "dig_key": "huxingtu"
+      },
+      {
+        "img_url_list": [
+          "http:\/\/image1.ljcdn.com\/110000-inspection\/6ffc2e46-0a19-40f0-9f49-e3c22d61984a.JPG.1000x750.jpg",
+          "http:\/\/image1.ljcdn.com\/110000-inspection\/09d4ea85-0c6f-4851-9d6e-038528229873.JPG.1000x750.jpg"
+        ],
+        "group_name": "卧室",
+        "group_id": 3,
+        "dig_key": "woshi"
+      },
+      {
+        "img_url_list": [
+          "http:\/\/image1.ljcdn.com\/110000-inspection\/a8d2f191-48d6-46ed-b587-5a2ae417ca84.JPG.1000x750.jpg"
+        ],
+        "group_name": "厨房",
+        "group_id": 4,
+        "dig_key": "chufang"
+      },
+      {
+        "img_url_list": [
+          "http:\/\/image1.ljcdn.com\/110000-inspection\/1f5d406d-a69e-4440-8edf-a6dacfa9e026.JPG.1000x750.jpg",
+          "http:\/\/image1.ljcdn.com\/110000-inspection\/5bb05ebe-96e1-497e-8ffd-8967dab06e98.JPG.1000x750.jpg"
+        ],
+        "group_name": "卫生间",
+        "group_id": 5,
+        "dig_key": "weishengjian"
+      }
+    ],
+    "basic_info": {
+      "is_focus": true,
+      "is_off_sale": false,
+      "title": "中苑南北双卫2居室中楼层诚意出售",
+      "city_id": "110000",
+      "house_code": "101102055046",
+      "community_id": "1111027380057",
+      "community_name": "天通苑中苑",
+      "price": 4360000,
+      "unit_price": 40063,
+      "floor_state": "中楼层\/6层",
+      "blueprint_hall_num": 1,
+      "blueprint_bedroom_num": 2,
+      "area": 108.83,
+      "orientation": "南 北",
+      "m_url": "https:\/\/m.lianjia.com\/bj\/ershoufang\/101102055046.html",
+      "has_frame_points": 0
+    },
+    "basic_list": [
+      {
+        "name": "售价",
+        "value": "436万"
+      },
+      {
+        "name": "房型",
+        "value": "2室1厅"
+      },
+      {
+        "name": "建筑面积",
+        "value": "108.83㎡"
+      }
+    ],
+    "color_tags": [
+      {
+        "desc": "满五年",
+        "color": "ff8062"
+      }
+    ],
+    "info_list": [
+      {
+        "name": "单价：",
+        "value": "40063元\/平"
+      },
+      {
+        "name": "挂牌：",
+        "value": "2017.09.08"
+      },
+      {
+        "name": "朝向：",
+        "value": "南 北"
+      },
+      {
+        "name": "楼层：",
+        "value": "中楼层\/6层"
+      },
+      {
+        "name": "楼型：",
+        "value": "板楼"
+      },
+      {
+        "name": "电梯：",
+        "value": "无"
+      },
+      {
+        "name": "装修：",
+        "value": "精装"
+      },
+      {
+        "name": "年代：",
+        "value": "2007年"
+      },
+      {
+        "name": "用途：",
+        "value": "普通住宅"
+      },
+      {
+        "name": "权属：",
+        "value": "一类经济适用房"
+      }
+    ],
+    "info_jump_list": [
+      {
+        "id": "goufangyusuan",
+        "name": "首付预算：",
+        "value": "首付及贷款情况请咨询经纪人"
+      },
+      {
+        "id": "xiaoqurukou",
+        "name": "小区：",
+        "value": "天通苑中苑",
+        "action_url": "lianjia:\/\/community\/detailv3?communityid=1111027380057"
+      }
+    ],
+    "frame_cell": {
+      "cell_info": [
+        "客厅：28.4㎡\/南\/落地窗",
+        "卧室A：12.1㎡\/南\/飘窗",
+        "卧室B：12.0㎡\/北\/普通窗"
+      ],
+      "picture": "http:\/\/image1.ljcdn.com\/x-se\/hdic-frame\/2a4b885c-6644-4d4e-bef8-da543c50eff9.png",
+      "name": "户型格局"
+    },
+    "location": {
+      "title": "昌平，天通苑",
+      "baidu_lo": 116.432684,
+      "baidu_la": 40.077562
+    },
+    "house_intr": {
+      "name": "房源介绍",
+      "action_url": "lianjia:\/\/page\/ershou\/intro_detail?focus=1&house_code=101102055046",
+      "intr": {
+        "content": "2008年的新社区，小板楼南北2居室，主卧室带飘窗进门是朝南的客厅带落地打阳台，主卧室朝南带独卫生间，次卧室厨房朝北，厨房带生活阳台，户型结构方正，没有浪费空间房子一直业主自己住，居家装修，干净整洁，房子保持的很好，不挑剔简单收拾可以入住。房子是商品房满五年，业主名下无其他住房，首套1.5%契税，二套3%契税，适合低首付人群。房子产权清晰，没有抵押，没有尾款，房本在手，随时签约，业主很靠谱。小区出行方便，出门1个红路灯就是国泰百货，物美超市，白坊菜市场，苏宁电器等，小区往西清华长庚医院也是三甲的医保定点医院",
+        "action_url": "lianjia:\/\/page\/ershou\/intro_detail?focus=1&house_code=101102055046"
+      },
+      "agent_daikan_comment": {
+        "name": "经纪人带看反馈 (36)",
+        "last_see_date": "最新带看 2017.11.19",
+        "photo_url": "http:\/\/image1.ljcdn.com\/usercenter\/images\/uc_ehr_avatar\/19fd71b9-14c0-4ee5-8169-603584f80f33.jpg.120x160.png",
+        "comment": "您好，本人是天通苑东区资深经纪人黄霜。此房我实地看过，和业主相对比较熟悉。此房是板楼四层，客厅带阳台朝南，主卧带卫生间朝南，次卧与厨房朝北，中间是客卫，保证两卧室的私密性，厨房设计了一个独立餐厅。此房为商品房满五年唯一。欢迎您的来电咨询，祝您生活愉快。",
+        "action_url": "lianjia:\/\/page\/ershou\/intro_detail?focus=3&house_code=101102055046"
+      }
+    },
+    "house_news": {
+      "name": "房源动态",
+      "list": [
+        {
+          "name": "近7日带看(次)",
+          "value": "18"
+        },
+        {
+          "name": "累计带看(次)",
+          "value": "63"
+        },
+        {
+          "name": "关注房源(人)",
+          "value": "110"
+        }
+      ],
+      "all_see_record": {
+        "name": "全部带看记录",
+        "desc": "最近带看 2017.11.20",
+        "action_url": "lianjia:\/\/seenRecord\/houseSeenRecordList?houseCode=101102055046&houseType=1"
+      },
+      "timeline": {
+        "name": "房源时间轴",
+        "desc": "挂牌时间 2017.09.08",
+        "list": [
+          {
+            "desc": "近一周带看18次",
+            "time": 1511169000
+          },
+          {
+            "desc": "上传照片",
+            "time": 1504874278
+          },
+          {
+            "desc": "房源挂牌",
+            "time": 1504863733
+          }
+        ]
+      }
+    },
+    "agents": [
+      {
+        "city_id": "110000",
+        "phone": "15313331898",
+        "agent_code": "20279194",
+        "agent_ucid": "1000000020279194",
+        "mobile_phone": "15313331898",
+        "photo_url": "http:\/\/image1.ljcdn.com\/usercenter\/images\/uc_ehr_avatar\/a30832a1-57a8-40ce-8d20-a078b48f3a02.jpg.120x160.png",
+        "name": "赵国娟",
+        "good_rate": 1,
+        "soso_rate": 0,
+        "bad_rate": 0,
+        "shop_name": "天通苑北三区店",
+        "se_status": 0,
+        "bit_status": "65535",
+        "agent_level": "高级经纪人",
+        "feedback_count": 49,
+        "app_id": "104",
+        "job_year": "1-2年",
+        "m_url": "https:\/\/m.lianjia.com\/bj\/jingjiren\/1000000020279194\/",
+        "score_desc": "5.0",
+        "review_count": 49,
+        "agent_position": "785",
+        "online_status": 1,
+        "desc": "我最近带看本房5次，清楚本房特色",
+        "house_see_count": 5
+      },
+      {
+        "city_id": "110000",
+        "phone": "13581729406",
+        "agent_code": "20279287",
+        "agent_ucid": "1000000020279287",
+        "mobile_phone": "13581729406",
+        "photo_url": "http:\/\/image1.ljcdn.com\/usercenter\/images\/uc_ehr_avatar\/f9137b63-42d2-44ec-9d46-f5985417d9d6.jpg.120x160.png",
+        "name": "陶红艳",
+        "good_rate": 1,
+        "soso_rate": 0,
+        "bad_rate": 0,
+        "shop_name": "天通苑北三区店",
+        "se_status": 0,
+        "bit_status": "65535",
+        "agent_level": "高级店经理",
+        "feedback_count": 5,
+        "app_id": "104",
+        "job_year": "1-2年",
+        "m_url": "https:\/\/m.lianjia.com\/bj\/jingjiren\/1000000020279287\/",
+        "score_desc": "5.0",
+        "review_count": 5,
+        "agent_position": "785",
+        "online_status": 1,
+        "desc": "本房信息由我维护，有变化最快得知",
+        "house_see_count": 5
+      },
+      {
+        "city_id": "110000",
+        "phone": "18810801014",
+        "agent_code": "20023715",
+        "agent_ucid": "1000000020023715",
+        "mobile_phone": "18810801014",
+        "photo_url": "http:\/\/image1.ljcdn.com\/usercenter\/images\/uc_ehr_avatar\/15ef8d69-0cc8-44df-8452-e4768d20d0ac.jpg.120x160.png",
+        "name": "宋金友",
+        "good_rate": 1,
+        "soso_rate": 0,
+        "bad_rate": 0,
+        "shop_name": "华贸城店",
+        "se_status": 0,
+        "bit_status": "65535",
+        "agent_level": "店经理",
+        "feedback_count": 54,
+        "app_id": "104",
+        "job_year": "5年以上",
+        "m_url": "https:\/\/m.lianjia.com\/bj\/jingjiren\/1000000020023715\/",
+        "score_desc": "5.0",
+        "review_count": 54,
+        "agent_position": "785",
+        "online_status": 1,
+        "desc": "我最近带看本房2次，了解本房特色",
+        "house_see_count": 2
+      }
+    ],
+    "user_related": {
+      "is_followed": 0,
+      "is_add_cart": 0,
+      "is_reported": 0,
+      "is_owner": 0
+    }
+  },
+  "cost": 399
+}
