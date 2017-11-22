@@ -13,7 +13,7 @@ headers = {
     'Lianjia-Channel': 'Android_Anzhi',
     'Lianjia-Device-Id': '6fc5da9bec827948',
     'Lianjia-Version': '8.2.1',
-    'Authorization': 'MjAxNzAzMjRfYW5kcm9pZDpmYjQxYWI4ZmI5NDMyOWE0MWE5ZmU2ZjQ3Mzg2YjQ1N2FhMzg3ZTQ4',
+    'Authorization': 'MjAxNzAzMjRfYW5kcm9pZDozYmNjNTc0Yjg5MDIyYjdhMDRkYjgzY2I0ZGM1YjEzMjYwOGJjMDEy',
     'Lianjia-Im-Version': '2.4.4',
     'Host': 'app.api.lianjia.com',
     'Connection': 'Keep-Alive',
@@ -22,7 +22,8 @@ headers = {
 
 result = requests.get(
     # 'https://app.api.lianjia.com/house/chengjiao/search?city_id=110000&limit_offset=20&limit_count=20&request_ts=1511170093',
-    'https://app.api.lianjia.com/house/chengjiao/search?city_id=110000&limit_offset=0&limit_count=10&request_ts=1511232061',
+    # 'https://app.api.lianjia.com/house/chengjiao/search?city_id=110000&limit_offset=0&limit_count=10&request_ts=1511232061',
+    'https://app.api.lianjia.com/house/chengjiao/detailpart1?house_code=101102035004&request_ts=1511334292',
     headers=headers)
 
 print result.text

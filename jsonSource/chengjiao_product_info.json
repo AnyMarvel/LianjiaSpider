@@ -1,0 +1,170 @@
+{
+	"request_id": "1ecd2d7ed43b1721864699c95fee2e36",
+	"errno": 0,
+	"error": "",
+	"data": {
+		"picture_list": [{
+			"img_url_list": ["http:\/\/image1.ljcdn.com\/110000-inspection\/63f3b155-dbc7-4c6f-a7bc-1eb17b3c7c52.jpg.1000x750.jpg"],
+			"group_name": "客厅",
+			"group_id": 1,
+			"dig_key": "keting"
+		}, {
+			"img_url_list": ["http:\/\/image1.ljcdn.com\/x-se\/hdic-frame\/ea4dc6b0-2fa3-42ff-af72-4d3c1a1a2ddb.png.1440x1080.jpg"],
+			"group_name": "户型图",
+			"group_id": 2,
+			"dig_key": "huxingtu"
+		}, {
+			"img_url_list": ["http:\/\/image1.ljcdn.com\/110000-inspection\/ab1e841b-4b80-4b6b-9f95-11c28b754a50.jpg.1000x750.jpg"],
+			"group_name": "卧室",
+			"group_id": 3,
+			"dig_key": "woshi"
+		}, {
+			"img_url_list": ["http:\/\/image1.ljcdn.com\/110000-inspection\/27cc0986-8a10-4fa6-b114-aa6e54f6bcff.jpg.1000x750.jpg"],
+			"group_name": "厨房",
+			"group_id": 4,
+			"dig_key": "chufang"
+		}, {
+			"img_url_list": ["http:\/\/image1.ljcdn.com\/110000-inspection\/38c8b410-c109-4733-b1a5-80c34318d1ee.jpg.1000x750.jpg"],
+			"group_name": "卫生间",
+			"group_id": 5,
+			"dig_key": "weishengjian"
+		}],
+		"basic_info": {
+			"title": "明光村小区 1室1厅 46.8㎡",
+			"city_id": "110000",
+			"house_code": "101102035004",
+			"community_id": "1111027378266",
+			"community_name": "明光村小区",
+			"price": 3750000,
+			"unit_price": 80128,
+			"floor_state": "中楼层\/5层",
+			"blueprint_hall_num": 1,
+			"blueprint_bedroom_num": 1,
+			"area": 46.8,
+			"orientation": "南 西",
+			"m_url": "https:\/\/m.lianjia.com\/bj\/chengjiao\/101102035004.html"
+		},
+		"basic_list": [{
+			"name": "成交价格",
+			"value": "375万"
+		}, {
+			"name": "单价",
+			"value": "80129元\/平"
+		}],
+		"info_list": [{
+			"name": "来源：",
+			"value": "链家成交"
+		}, {
+			"name": "成交：",
+			"value": "2017.11.07"
+		}, {
+			"name": "朝向：",
+			"value": "南 西"
+		}, {
+			"name": "楼层：",
+			"value": "中楼层\/5层"
+		}, {
+			"name": "楼型：",
+			"value": "板楼"
+		}, {
+			"name": "电梯：",
+			"value": "无"
+		}, {
+			"name": "装修：",
+			"value": "精装"
+		}, {
+			"name": "年代：",
+			"value": "1995年"
+		}, {
+			"name": "用途：",
+			"value": "普通住宅"
+		}, {
+			"name": "权属：",
+			"value": "商品房"
+		}],
+		"info_jump_list": [{
+			"id": "xiaoqurukou",
+			"name": "小区：",
+			"value": "明光村小区",
+			"action_url": "lianjia:\/\/community\/detailv3?communityid=1111027378266"
+		}, {
+			"id": "fangyuanjieshao",
+			"name": "其他：",
+			"value": "房源介绍\/房主自荐",
+			"action_url": "lianjia:\/\/page\/ershou\/intro_detail?focus=1&house_code=101102035004"
+		}],
+		"frame_cell": {
+			"cell_info": ["客厅：12.2㎡\/暂无数据\/未知窗户类型", "卧室：14.3㎡\/暂无数据\/未知窗户类型", "厨房：3.2㎡\/暂无数据\/未知窗户类型"],
+			"picture": "http:\/\/image1.ljcdn.com\/x-se\/hdic-frame\/ea4dc6b0-2fa3-42ff-af72-4d3c1a1a2ddb.png",
+			"name": "户型格局"
+		},
+		"location": {
+			"title": "海淀，西直门",
+			"baidu_lo": 116.359841,
+			"baidu_la": 39.962265
+		},
+		"deal_info": {
+			"name": "本房成交信息",
+			"review": {
+				"name": "本次成交回顾",
+				"list": [{
+					"name": "挂牌价格(万)",
+					"value": "396"
+				}, {
+					"name": "成交周期(天)",
+					"value": "66"
+				}, {
+					"name": "调价(次)",
+					"value": "2"
+				}, {
+					"name": "带看(次)",
+					"value": "57"
+				}, {
+					"name": "关注(人)",
+					"value": "150"
+				}, {
+					"name": "浏览(次)",
+					"value": "5052"
+				}]
+			},
+			"history": {
+				"name": "历史成交记录",
+				"list": [{
+					"price": "375万",
+					"desc": "单价80129元\/平，链家成交，2017.11.07"
+				}, {
+					"price": "243万",
+					"desc": "单价51924元\/平，链家成交，2016.01.08"
+				}]
+			}
+		},
+		"agent": {
+			"city_id": "110000",
+			"phone": "4008167399转9211",
+			"agent_code": "20048764",
+			"agent_ucid": "1000000020048764",
+			"mobile_phone": "18601912835",
+			"photo_url": "http:\/\/image1.ljcdn.com\/usercenter\/images\/uc_ehr_avatar\/3879e2f5-5d1e-40d5-ade8-8ab7df947237.jpg.120x160.png",
+			"name": "律恩东",
+			"good_rate": 0.96,
+			"soso_rate": 0.04,
+			"bad_rate": 0,
+			"shop_name": "中海店",
+			"se_status": 0,
+			"bit_status": "65535",
+			"agent_level": "店经理",
+			"feedback_count": 55,
+			"app_id": "104",
+			"job_year": "4-5年",
+			"m_url": "https:\/\/m.lianjia.com\/bj\/jingjiren\/1000000020048764\/",
+			"score_desc": "4.9",
+			"review_count": 55,
+			"agent_position": "785",
+			"online_status": 1,
+			"house_see_count": 2,
+			"desc": "想了解更详细的税费等成交信息？请联系我~",
+			"agent_choice": 0
+		}
+	},
+	"cost": 107
+}
