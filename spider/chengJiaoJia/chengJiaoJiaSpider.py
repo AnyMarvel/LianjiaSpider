@@ -20,20 +20,21 @@ class chengJiao:
         self.request_ts = 0
         # 由android JNI逆向得出的链家apk秘钥
         # self.Authorization = '93273ef46a0b880faf4466c48f74878fcity_id=110000limit_count=10limit_offset=0request_ts=1511232061'
+        # 成交只需要Authorization网关认证
         self.headers = {
-            'Page-Schema': 'tradedSearch%2Flist',
-            'Referer': 'homepage%3F',
-            'Cookie': 'lianjia_udid=6fc5da9bec827948;lianjia_token=2.007d00a43c04bd8bd26cad8d0d82a4302c;lianjia_ssid=a3c137a9-c77c-438a-a6c0-27c160707d7c;lianjia_uuid=39d20bd7-28a5-4ffa-bbac-dd70d6eaf2cd',
-            'Lianjia-Access-Token': '2.007d00a43c04bd8bd26cad8d0d82a4302c',
-            'User-Agent': 'HomeLink8.2.1;generic Custom+Phone+-+5.0.0+-+API+21+-+768x1280; Android 5.0',
-            'Lianjia-Channel': 'Android_Anzhi',
-            'Lianjia-Device-Id': '6fc5da9bec827948',
-            'Lianjia-Version': '8.2.1',
+            # 'Page-Schema': 'tradedSearch%2Flist',
+            # 'Referer': 'homepage%3F',
+            # 'Cookie': 'lianjia_udid=6fc5da9bec827948;lianjia_token=2.007d00a43c04bd8bd26cad8d0d82a4302c;lianjia_ssid=a3c137a9-c77c-438a-a6c0-27c160707d7c;lianjia_uuid=39d20bd7-28a5-4ffa-bbac-dd70d6eaf2cd',
+            # 'Lianjia-Access-Token': '2.007d00a43c04bd8bd26cad8d0d82a4302c',
+            # 'User-Agent': 'HomeLink8.2.1;generic Custom+Phone+-+5.0.0+-+API+21+-+768x1280; Android 5.0',
+            # 'Lianjia-Channel': 'Android_Anzhi',
+            # 'Lianjia-Device-Id': '6fc5da9bec827948',
+            # 'Lianjia-Version': '8.2.1',
             'Authorization': '93273ef46a0b880faf4466c48f74878fcity_id=110000limit_count=10limit_offset=0request_ts=1511232061',
-            'Lianjia-Im-Version': '2.4.4',
-            'Host': 'app.api.lianjia.com',
-            'Connection': 'Keep-Alive',
-            'Accept-Encoding': 'gzip'
+            # 'Lianjia-Im-Version': '2.4.4',
+            # 'Host': 'app.api.lianjia.com',
+            # 'Connection': 'Keep-Alive',
+            # 'Accept-Encoding': 'gzip'
         }
         self.cheng_jiao_data_analysis = cheng_jiao_data_analysis()
 
