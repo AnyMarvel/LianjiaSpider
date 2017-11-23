@@ -15,17 +15,17 @@ class cheng_jiao_data_analysis:
     def chengjiao_product(self, json):
         basic_info = json['basic_info']
         self.er_shou_product_entity['标题'] = str(basic_info['title'])
-        self.er_shou_product_entity['city_id'] = str(basic_info['city_id'])
-        self.er_shou_product_entity['house_code'] = str(basic_info['house_code'])
-        self.er_shou_product_entity['community_id'] = str(basic_info['community_id'])
-        self.er_shou_product_entity['community_name'] = str(basic_info['community_name'])
-        self.er_shou_product_entity['price'] = str(basic_info['price'])
-        self.er_shou_product_entity['unit_price'] = str(basic_info['unit_price'])
-        self.er_shou_product_entity['floor_state'] = str(basic_info['floor_state'])
-        self.er_shou_product_entity['blueprint_hall_num'] = str(basic_info['blueprint_hall_num'])
-        self.er_shou_product_entity['blueprint_bedroom_num'] = str(basic_info['blueprint_bedroom_num'])
-        self.er_shou_product_entity['area'] = str(basic_info['area']) + '㎡'
-        self.er_shou_product_entity['orientation'] = str(basic_info['orientation'])
+        self.er_shou_product_entity['城市'] = '北京'
+        self.er_shou_product_entity['链家编号'] = str(basic_info['house_code'])
+        # self.er_shou_product_entity['community_id'] = str(basic_info['community_id'])
+        self.er_shou_product_entity['小区'] = str(basic_info['community_name'])
+        self.er_shou_product_entity['总价(元)'] = str(basic_info['price'])
+        self.er_shou_product_entity['单价(元/平)'] = str(basic_info['unit_price'])
+        self.er_shou_product_entity['楼层状态'] = str(basic_info['floor_state'])
+        # self.er_shou_product_entity['blueprint_hall_num'] = str(basic_info['blueprint_hall_num'])
+        # self.er_shou_product_entity['blueprint_bedroom_num'] = str(basic_info['blueprint_bedroom_num'])
+        self.er_shou_product_entity['面积(㎡)'] = str(basic_info['area']) + '㎡'
+        self.er_shou_product_entity['朝向'] = str(basic_info['orientation'])
 
         basic_list_data = json['basic_list']
         for item in basic_list_data:
