@@ -5,6 +5,7 @@ import base64
 import hashlib
 import json
 import sys
+from zaishou_data_analysis import zaishou_data_analysis
 
 
 class zaishou:
@@ -34,6 +35,7 @@ class zaishou:
             'Connection': 'Keep-Alive',
             'Accept-Encoding': 'gzip'
         }
+        self.zaishou_data_analysis = zaishou_data_analysis()
 
     def start(self):
         for i in range(self.count):
@@ -79,10 +81,10 @@ class zaishou:
                 i['house_code']) + '&agent_type=1&request_ts=' + str(self.request_ts)
             result_product = requests.get(zaishou_pruduct_url, headers=self.headers)
             print zaishou_pruduct_url
-            print result_product.text
+            # print result_product.text
 
             product_json = json.loads(result_product.text, encoding='utf-8')
-            # self.cheng_jiao_data_analysis.chengjiao_product(product_json['data'])
+            self.zaishou_data_analysis.zaishou_product(product_json['data'])
 
             # 获取更多
             self.request_ts = int(time.time())
@@ -97,7 +99,7 @@ class zaishou:
 
             product_json_more = json.loads(result_product_more.text, encoding='utf-8')
 
-            # self.cheng_jiao_data_analysis.chengjiao_more_infos(product_json_more)
+            self.zaishou_data_analysis.zaishou_product_moire(product_json_more)
 
             print result_product_more.text
 

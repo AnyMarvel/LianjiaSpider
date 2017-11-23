@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-import sys
-
-defaultencoding = 'utf-8'
-if sys.getdefaultencoding() != defaultencoding:
-    reload(sys)
-    sys.setdefaultencoding(defaultencoding)
 
 
 class cheng_jiao_data_analysis:
@@ -53,8 +47,8 @@ class cheng_jiao_data_analysis:
             # print self.er_shou_product_entity
 
     def chengjiao_more_infos(self, json):
-        base_list_info = json['data']['list']
-        for item in base_list_info:
+        more_list_info = json['data']['list']
+        for item in more_list_info:
             for children_item in item['list']:
                 if children_item.get('name') is not None and children_item.get('value') is not None:
                     self.er_shou_product_entity[children_item['name']] = str(children_item['value'])
