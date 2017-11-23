@@ -15,21 +15,23 @@ class zaishou_data_analysis:
     def zaishou_product(self, json):
         basic_info = json['basic_info']
 
-        self.zaishou_product_entity['is_focus'] = basic_info['is_focus']
-        self.zaishou_product_entity['is_off_sale'] = basic_info['is_off_sale']
-        self.zaishou_product_entity['title'] = basic_info['title']
-        self.zaishou_product_entity['city_id'] = basic_info['city_id']
-        self.zaishou_product_entity['house_code'] = basic_info['house_code']
-        self.zaishou_product_entity['community_id'] = basic_info['community_id']
-        self.zaishou_product_entity['community_name'] = basic_info['community_name']
-        self.zaishou_product_entity['price'] = basic_info['price']
-        self.zaishou_product_entity['unit_price'] = basic_info['unit_price']
-        self.zaishou_product_entity['floor_state'] = basic_info['floor_state']
-        self.zaishou_product_entity['blueprint_hall_num'] = basic_info['blueprint_hall_num']
-        self.zaishou_product_entity['blueprint_bedroom_num'] = basic_info['blueprint_bedroom_num']
-        self.zaishou_product_entity['area'] = basic_info['area']
-        self.zaishou_product_entity['orientation'] = basic_info['orientation']
-        self.zaishou_product_entity['has_frame_points'] = basic_info['has_frame_points']
+        # self.zaishou_product_entity['is_focus'] = basic_info['is_focus']
+        # self.zaishou_product_entity['is_off_sale'] = basic_info['is_off_sale']
+        self.zaishou_product_entity['标题'] = basic_info['title']
+        # self.zaishou_product_entity['city_id'] = basic_info['city_id']
+        self.zaishou_product_entity['城市'] = '北京'
+        self.zaishou_product_entity['链家编号'] = basic_info['house_code']
+        # self.zaishou_product_entity['community_id'] = basic_info['community_id']
+        self.zaishou_product_entity['小区'] = basic_info['community_name']
+        self.zaishou_product_entity['总价(元)'] = basic_info['price']
+        self.zaishou_product_entity['单价(元/平)'] = basic_info['unit_price']
+        self.zaishou_product_entity['楼层状态'] = basic_info['floor_state']
+        # 三室一厅
+        # self.zaishou_product_entity['blueprint_hall_num'] = basic_info['blueprint_hall_num']
+        # self.zaishou_product_entity['blueprint_bedroom_num'] = basic_info['blueprint_bedroom_num']
+        self.zaishou_product_entity['面积(㎡)'] = basic_info['area']
+        self.zaishou_product_entity['朝向'] = basic_info['orientation']
+        # self.zaishou_product_entity['has_frame_points'] = basic_info['has_frame_points']
 
         basic_list = json.get('basic_list')
         if basic_list is not None:
