@@ -85,6 +85,31 @@ class GetIpProxy():
             if judge_ip_status:
                 return self.infos.items()[i]
 
+    def requestUrlForRe(self, url):
+        try:
+            if len(self.proxyServer) == 0:
+                tempProxyServer = self.get_random_ip()
+            else:
+                tempProxyServer = self.proxyServer
+
+            proxy_dict = {
+                tempProxyServer[0]: tempProxyServer[1]
+            }
+            tempUrl = requests.get(url, headers=hds[random.randint(0, len(hds) - 1)], proxies=proxy_dict)
+
+            code = tempUrl.status_code
+            if code >= 200 or code < 300:
+                self.proxyServer = tempProxyServer
+                return tempUrl
+            else:
+                self.proxyServer = self.get_random_ip()
+                return self.requestUrlForRe(url)
+        except Exception as e:
+            self.proxyServer = self.get_random_ip()
+            s = requests.session()
+            s.keep_alive = False
+            return self.requestUrlForRe(url)
+
 #
 # getIpProxy = GetIpProxy()
 # getIpProxy.get_random_ip()
