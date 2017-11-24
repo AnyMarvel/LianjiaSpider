@@ -23,8 +23,8 @@ class zaishou_data_analysis:
         self.zaishou_product_entity['链家编号'] = basic_info['house_code']
         # self.zaishou_product_entity['community_id'] = basic_info['community_id']
         self.zaishou_product_entity['小区'] = basic_info['community_name']
-        self.zaishou_product_entity['总价(元)'] = basic_info['price']
-        self.zaishou_product_entity['单价(元/平)'] = basic_info['unit_price']
+        self.zaishou_product_entity['售价（元）'] = basic_info['price']
+        self.zaishou_product_entity['在售价(元/平)'] = basic_info['unit_price']
         self.zaishou_product_entity['楼层状态'] = basic_info['floor_state']
         # 三室一厅
         # self.zaishou_product_entity['blueprint_hall_num'] = basic_info['blueprint_hall_num']
@@ -55,9 +55,13 @@ class zaishou_data_analysis:
         frame_cell = json.get('frame_cell')
         if frame_cell is not None:
             self.zaishou_product_entity[frame_cell['name']] = ','.join(frame_cell['cell_info'])
-        location = json.get('location')
-        if location is not None:
-            self.zaishou_product_entity['位置'] = location['title']
+
+        # 位置
+        location_info = json['location']
+        local_temp = str(location_info['title']).split('，')
+
+        self.zaishou_product_entity['下辖区'] = local_temp[0]
+        self.zaishou_product_entity['商圈'] = local_temp[1]
 
         house_news = json.get('house_news')
         if house_news is not None:

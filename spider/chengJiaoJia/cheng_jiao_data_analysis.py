@@ -20,7 +20,7 @@ class cheng_jiao_data_analysis:
         # self.er_shou_product_entity['community_id'] = str(basic_info['community_id'])
         self.er_shou_product_entity['小区'] = str(basic_info['community_name'])
         self.er_shou_product_entity['总价(元)'] = str(basic_info['price'])
-        self.er_shou_product_entity['单价(元/平)'] = str(basic_info['unit_price'])
+        self.er_shou_product_entity['成交价(元/平)'] = str(basic_info['unit_price'])
         self.er_shou_product_entity['楼层状态'] = str(basic_info['floor_state'])
         # self.er_shou_product_entity['blueprint_hall_num'] = str(basic_info['blueprint_hall_num'])
         # self.er_shou_product_entity['blueprint_bedroom_num'] = str(basic_info['blueprint_bedroom_num'])
@@ -40,7 +40,11 @@ class cheng_jiao_data_analysis:
 
         # 位置
         location_info = json['location']
-        self.er_shou_product_entity['location'] = str(location_info['title'])
+        local_temp = str(location_info['title']).split('，')
+
+        self.er_shou_product_entity['下辖区'] = local_temp[0]
+        self.er_shou_product_entity['商圈'] = local_temp[1]
+
         # 本房成交信息回顾
         deal_info = json['deal_info']['review']['list']
         for item in deal_info:
@@ -52,6 +56,7 @@ class cheng_jiao_data_analysis:
             self.er_shou_product_entity[history_info['name']] = str(history_info['list'])
             # print self.er_shou_product_entity
 
+    # 更多信息中的json结构解析
     def chengjiao_more_infos(self, json):
         more_list_info = json['data']['list']
         for item in more_list_info:
