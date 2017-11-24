@@ -18,18 +18,12 @@ class generate_excle:
         self.raws = []
         self.wb = xlwt.Workbook(encoding='utf-8')
 
-    def start(self):
-        pass
-
-    def writeExcle(self, rowNumber, list):
-        for index in range(len(list)):
-            self.ws.write(rowNumber, index, list[index])
-
     def writeExclePositon(self, rowNumber, column, source_data):
         self.ws.write(rowNumber, column, source_data)
 
-    def saveExcle(self):
-        self.wb.save(u'LianJiaSpider.xls')
+    def saveExcle(self,name):
+        #u'LianJiaSpider.xls'
+        self.wb.save(name)
 
     def addSheetExcle(self, sheetName):
         self.ws = self.wb.add_sheet(sheetName)

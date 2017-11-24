@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-import sys
-
-defaultencoding = 'utf-8'
-if sys.getdefaultencoding() != defaultencoding:
-    reload(sys)
-    sys.setdefaultencoding(defaultencoding)
 
 
 class chengjiao_constant:
@@ -43,7 +37,7 @@ class chengjiao_constant:
         self.chengjiao_source_data['房屋年限'] = 26
         self.chengjiao_source_data['房屋用途'] = 27
         self.chengjiao_source_data['交易权属'] = 28
-        self.chengjiao_source_data['产权所属'] = 39
+        self.chengjiao_source_data['产权所属'] = 29
         self.chengjiao_source_data['土地年限'] = 30
         self.chengjiao_source_data['标题'] = 31
         self.chengjiao_source_data['来源'] = 32
