@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import time
 import sys
+from zaishou_constant import zaishou_constant
 
 defaultencoding = 'utf-8'
 if sys.getdefaultencoding() != defaultencoding:
@@ -11,6 +12,7 @@ if sys.getdefaultencoding() != defaultencoding:
 class zaishou_data_analysis:
     def __init__(self):
         self.zaishou_product_entity = {}
+        self.zaishou_constant = zaishou_constant()
 
     def zaishou_product(self, json):
         basic_info = json['basic_info']
@@ -20,7 +22,7 @@ class zaishou_data_analysis:
         self.zaishou_product_entity['标题'] = basic_info['title']
         # self.zaishou_product_entity['city_id'] = basic_info['city_id']
         self.zaishou_product_entity['城市'] = '北京'
-        self.zaishou_product_entity['链家编号'] = basic_info['house_code']
+        # self.zaishou_product_entity['链家编号'] = basic_info['house_code']#重复值,不需要解析
         # self.zaishou_product_entity['community_id'] = basic_info['community_id']
         self.zaishou_product_entity['小区'] = basic_info['community_name']
         self.zaishou_product_entity['售价（元）'] = basic_info['price']
@@ -30,7 +32,7 @@ class zaishou_data_analysis:
         # self.zaishou_product_entity['blueprint_hall_num'] = basic_info['blueprint_hall_num']
         # self.zaishou_product_entity['blueprint_bedroom_num'] = basic_info['blueprint_bedroom_num']
         self.zaishou_product_entity['面积(㎡)'] = basic_info['area']
-        self.zaishou_product_entity['朝向'] = basic_info['orientation']
+        # self.zaishou_product_entity['朝向'] = basic_info['orientation']#重复值,不需要解析
         # self.zaishou_product_entity['has_frame_points'] = basic_info['has_frame_points']
 
         basic_list = json.get('basic_list')
@@ -75,11 +77,20 @@ class zaishou_data_analysis:
             for item in timeline_list:
                 self.zaishou_product_entity[str(item['desc'])] = time.strftime('%Y-%m-%d', time.localtime(item['time']))
 
-    def zaishou_product_moire(self, json):
+    def zaishou_product_moire(self, json, row, generate_excle):
         more_list_info = json['data']['list']
         for item in more_list_info:
             for children_item in item['list']:
                 if children_item.get('name') is not None and children_item.get('value') is not None:
-                    self.zaishou_product_entity[children_item['name']] = str(children_item['value'])
+                    if children_item['name'].encode('utf-8') != '建筑面积：':
+                        self.zaishou_product_entity[children_item['name']] = str(children_item['value'])
+
+        # for item in self.zaishou_product_entity.keys():
+        #     print item + str(self.zaishou_product_entity.get(item))
+
         for item in self.zaishou_product_entity.keys():
-            print item, self.zaishou_product_entity.get(item)
+            tempdata = self.zaishou_constant.zaishou_check_name(item.replace('：', '').encode('utf-8'))
+            if tempdata is not None:
+                generate_excle.writeExclePositon(row + 1,
+                                                 self.zaishou_constant.zaishou_source_data.get(tempdata),
+                                                 self.zaishou_product_entity.get(item))

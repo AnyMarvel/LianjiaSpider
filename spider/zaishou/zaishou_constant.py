@@ -24,9 +24,9 @@ class zaishou_constant:
         self.zaishou_source_data['小区'] = 8
         self.zaishou_source_data['挂牌时间'] = 9
         self.zaishou_source_data['关注房源(人)'] = 10
-        self.zaishou_source_data['累计带看(次)'] = 11
+        self.zaishou_source_data['近30日带看(次)'] = 11
         self.zaishou_source_data['近7日带看(次)'] = 12
-        self.zaishou_source_data['售价（万）'] = 13
+        self.zaishou_source_data['售价(万)'] = 13
         self.zaishou_source_data['建成时间'] = 14
         self.zaishou_source_data['户型格局'] = 15
         self.zaishou_source_data['户型结构'] = 16
@@ -56,3 +56,5 @@ class zaishou_constant:
                 return '挂牌时间'
             if temp_data == '年代':
                 return '建成时间'
+            if temp_data=='售价':
+                return '售价(万)'
