@@ -100,8 +100,11 @@ class zaishou_data_analysis:
             if tempdata is not None:
                 column = self.zaishou_constant.zaishou_source_data.get(tempdata)  # 得到数据源所对应的列的位置
                 data = self.zaishou_product_entity.get(item)  # 得到数据源
-                if tempdata == '建筑面积':
-                    data = data[0:len(data) - 1]
+                if tempdata == '建筑面积'or tempdata == '售价(万)':
+                    if tempdata == '建筑面积':
+                        data = data[0:data.index('㎡')]
+                    else:
+                        data = data[0:data.index('万')]
                     style = xlwt.XFStyle()
                     style.num_format_str = '0.00'
                     generate_excle.wirte_Excle_In_style(row + 1, column , float(data), style)
@@ -111,11 +114,11 @@ class zaishou_data_analysis:
                     style.num_format_str = 'YYYY/MM/DD'
                     generate_excle.wirte_Excle_In_style(row + 1, column , data, style)
                 elif tempdata == '在售价(元/平)' or tempdata == '关注房源(人)' or tempdata == '近30日带看(次)' or tempdata == '近7日带看(次)' or tempdata == '售价(万)' or tempdata == '建成时间':
-                    if tempdata == '售价(万)' or tempdata == '建成时间':
-                        data = data[0:len(data) - 1]
+                    if tempdata == '建成时间':
+                        data = data[0:data.index('年')]
                     style = xlwt.XFStyle()
                     style.num_format_str = '0'
-                    print data
+                    # print data
                     generate_excle.wirte_Excle_In_style(row + 1, column , int(data), style)
                 else:
                     generate_excle.writeExclePositon(row + 1, column , data)
