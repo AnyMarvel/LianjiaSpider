@@ -5,6 +5,7 @@
 import random
 import re
 import requests
+import json
 
 hds = [{'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6'}, \
        {
@@ -102,7 +103,12 @@ class GetIpProxy():
             code = tempUrl.status_code
             if code >= 200 or code < 300:
                 self.proxyServer = tempProxyServer
-                return tempUrl
+                #适配链家内容是否为空的情况，进行ip动态置换
+                jsonsource = json.loads(tempUrl.text, encoding='utf-8')
+                if jsonsource['data'] is not None:
+                    return tempUrl
+                else:
+                    return self.requestUrlForRe(url, headers)
             else:
                 self.proxyServer = self.get_random_ip()
                 return self.requestUrlForRe(url, headers)
