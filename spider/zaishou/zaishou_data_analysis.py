@@ -104,7 +104,7 @@ class zaishou_data_analysis:
                     data = data[0:len(data) - 1]
                     style = xlwt.XFStyle()
                     style.num_format_str = '0.00'
-                    generate_excle.wirte_Excle_In_style(row + 1, count, data, style)
+                    generate_excle.wirte_Excle_In_style(row + 1, count, float(data), style)
                 elif tempdata == '挂牌时间' or tempdata == '上次交易':
                     data = data.replace('.', '/')
                     style = xlwt.XFStyle()
