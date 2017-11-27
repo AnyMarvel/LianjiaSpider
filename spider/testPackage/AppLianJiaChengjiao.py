@@ -13,7 +13,7 @@ headers = {
     'Lianjia-Channel': 'Android_Anzhi',
     'Lianjia-Device-Id': '6fc5da9bec827948',
     'Lianjia-Version': '8.2.1',
-    'Authorization': 'MjAxNzAzMjRfYW5kcm9pZDplMDgzZWQ2YjYxZWQ5YTA3ZDNiYTk3Y2YzMTVhZmExNWJlYzE4YzRh',
+    'Authorization': 'MjAxNzAzMjRfYW5kcm9pZDpiOTQzOWJhYzQ2YTRmNGRmMTQzOGUwYTE1YTVlMDE3ZWM3OTRhNDI4',
     'Lianjia-Im-Version': '2.4.4',
     'Host': 'app.api.lianjia.com',
     'Connection': 'Keep-Alive',
@@ -23,7 +23,7 @@ headers = {
 result = requests.get(
     # 'https://app.api.lianjia.com/house/chengjiao/search?city_id=110000&limit_offset=20&limit_count=20&request_ts=1511170093',
     # 'https://app.api.lianjia.com/house/chengjiao/search?city_id=110000&limit_offset=0&limit_count=10&request_ts=1511232061',
-    'https://app.api.lianjia.com/house/zufang/searchV2?city_id=110000&priceRequest=&limit_offset=0&moreRequest=&communityRequset=&is_suggestion=0&limit_count=20&sugQueryStr=&comunityIdRequest=&areaRequest=&is_history=0&condition=&roomRequest=&isFromMap=false&request_ts=1511339341',
+    'https://app.api.lianjia.com/house/chengjiao/search?city_id=110000&limit_offset=0&limit_count=100&request_ts=1511232061',
     headers=headers)
 
 print result.text
