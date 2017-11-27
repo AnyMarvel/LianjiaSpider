@@ -8,7 +8,7 @@ from cheng_jiao_data_analysis import cheng_jiao_data_analysis
 import sys
 from spider.generate_excle import generate_excle
 from chengjiao_constant import chengjiao_constant
-
+from spider.AgentAndProxies import GetIpProxy
 
 class chengJiao:
     def __init__(self):
@@ -41,6 +41,7 @@ class chengJiao:
             # 'Accept-Encoding': 'gzip'
         }
         self.cheng_jiao_data_analysis = cheng_jiao_data_analysis()
+        self.GetIpProxy = GetIpProxy()
 
     def start(self):
         self.excle_init_title()
@@ -69,7 +70,10 @@ class chengJiao:
         self.get_result_json_list(url)
 
     def get_result_json_list(self, url):
-        result_list = requests.get(url, headers=self.headers)
+        # 替换代理模式
+        # result_list = requests.get(url, headers=self.headers)
+        result_list = self.GetIpProxy.requestUrlForRe(url, self.headers)
+
         # print result_list.text
         jsonsource = json.loads(result_list.text, encoding='utf-8')
 
@@ -81,11 +85,15 @@ class chengJiao:
             # 生成证书认证
             self.generate_authorization(er_shou_pruduct_url_authorization)
 
-            er_shou_pruduct_url = 'https://app.api.lianjia.com/house/chengjiao/detailpart1?house_code=' + str(
+            chengjiao_pruduct_url = 'https://app.api.lianjia.com/house/chengjiao/detailpart1?house_code=' + str(
                 jsonsource["data"]['list'][index]['house_code']) + '&request_ts=' + str(self.request_ts)
+
             # todo 网络访问增加代理请求
-            result_product = requests.get(er_shou_pruduct_url, headers=self.headers)
-            print er_shou_pruduct_url
+            # 替换代理模式
+            # result_product = requests.get(er_shou_pruduct_url, headers=self.headers)
+            result_product = self.GetIpProxy.requestUrlForRe(chengjiao_pruduct_url, self.headers)
+
+            print 'row:' + str(index) + '   url:' + chengjiao_pruduct_url
             # print "result_product:" + result_product.text
 
             product_json = json.loads(result_product.text, encoding='utf-8')
@@ -102,7 +110,9 @@ class chengJiao:
                 jsonsource["data"]['list'][index]['house_code']) + '&request_ts=' + str(self.request_ts)
 
             # todo 网络访问增加代理请求
-            result_product_more = requests.get(chengjiao_more_url, headers=self.headers)
+            # 替换代理模式
+            # result_product_more = requests.get(chengjiao_more_url, headers=self.headers)
+            result_product_more = self.GetIpProxy.requestUrlForRe(chengjiao_more_url, self.headers)
 
             product_json_more = json.loads(result_product_more.text, encoding='utf-8')
 

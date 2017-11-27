@@ -8,6 +8,7 @@ import sys
 from zaishou_data_analysis import zaishou_data_analysis
 from spider.generate_excle import generate_excle
 from zaishou_constant import zaishou_constant
+from spider.AgentAndProxies import GetIpProxy
 
 
 class zaishou:
@@ -41,6 +42,7 @@ class zaishou:
             # 'Accept-Encoding': 'gzip'
         }
         self.zaishou_data_analysis = zaishou_data_analysis()
+        self.GetIpProxy = GetIpProxy()
 
     def start(self):
         self.excle_init_title()
@@ -74,7 +76,9 @@ class zaishou:
         self.get_result_json_list(url)
 
     def get_result_json_list(self, url):
-        result_list = requests.get(url, headers=self.headers)
+        # 替换代理模式
+        # result_list = requests.get(url, headers=self.headers)
+        result_list = self.GetIpProxy.requestUrlForRe(url, self.headers)
         # print result_list.text
         jsonsource = json.loads(result_list.text, encoding='utf-8')
 
@@ -88,7 +92,9 @@ class zaishou:
 
             zaishou_pruduct_url = 'https://app.api.lianjia.com/house/ershoufang/detailpart1?house_code=' + str(
                 jsonsource["data"]['list'][index]['house_code']) + '&agent_type=1&request_ts=' + str(self.request_ts)
-            result_product = requests.get(zaishou_pruduct_url, headers=self.headers)
+            # 替换代理模式
+            # result_product = requests.get(zaishou_pruduct_url, headers=self.headers)
+            result_product = self.GetIpProxy.requestUrlForRe(zaishou_pruduct_url, self.headers)
             print 'row:' + str(index) + 'url:' + zaishou_pruduct_url
             # print result_product.text
 
@@ -97,14 +103,15 @@ class zaishou:
 
             # 获取更多
             self.request_ts = int(time.time())
-            chengjiao_pruduct_more_authorization = '93273ef46a0b880faf4466c48f74878fhouse_code=' + str(
+            zaishou_pruduct_more_authorization = '93273ef46a0b880faf4466c48f74878fhouse_code=' + str(
                 jsonsource["data"]['list'][index]['house_code']) + 'request_ts=' + str(self.request_ts)
             # 生成证书认证
-            self.generate_authorization(chengjiao_pruduct_more_authorization)
-            chengjiao_more_url = 'https://app.api.lianjia.com/house/house/moreinfo?house_code=' + str(
+            self.generate_authorization(zaishou_pruduct_more_authorization)
+            zaishou_product_more_url = 'https://app.api.lianjia.com/house/house/moreinfo?house_code=' + str(
                 jsonsource["data"]['list'][index]['house_code']) + '&request_ts=' + str(self.request_ts)
-
-            result_product_more = requests.get(chengjiao_more_url, headers=self.headers)
+            # 替换代理模式
+            # result_product_more = requests.get(chengjiao_more_url, headers=self.headers)
+            result_product_more = self.GetIpProxy.requestUrlForRe(zaishou_product_more_url, self.headers)
 
             product_json_more = json.loads(result_product_more.text, encoding='utf-8')
 

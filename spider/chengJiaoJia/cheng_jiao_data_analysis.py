@@ -82,7 +82,7 @@ class cheng_jiao_data_analysis:
                         data = data[0:data.index('㎡')]
                     else:
                         data = data[0:data.index('万')]
-                    print data
+                    # print data
                     style = xlwt.XFStyle()
                     style.num_format_str = '0.00'
                     generate_excle.wirte_Excle_In_style(row + 1, column, float(data), style)
@@ -98,7 +98,7 @@ class cheng_jiao_data_analysis:
                         data = data[0:data.index('年') - 1]
                     style = xlwt.XFStyle()
                     style.num_format_str = '0'
-                    print data
+                    # print data
                     generate_excle.wirte_Excle_In_style(row + 1, column, int(data), style)
                 else:
                     generate_excle.writeExclePositon(row + 1, column, data)

@@ -43,6 +43,7 @@ class GetIpProxy():
     def __init__(self):
         self.infos = {}
         self.getIpPool()
+        self.proxyServer = ()
 
     def getIpPool(self):
         geturl = requests.get('http://www.xicidaili.com/', headers=hds[random.randint(0, len(hds) - 1)])
@@ -85,7 +86,8 @@ class GetIpProxy():
             if judge_ip_status:
                 return self.infos.items()[i]
 
-    def requestUrlForRe(self, url):
+    # 动态代理调用
+    def requestUrlForRe(self, url, headers):
         try:
             if len(self.proxyServer) == 0:
                 tempProxyServer = self.get_random_ip()
@@ -95,7 +97,7 @@ class GetIpProxy():
             proxy_dict = {
                 tempProxyServer[0]: tempProxyServer[1]
             }
-            tempUrl = requests.get(url, headers=hds[random.randint(0, len(hds) - 1)], proxies=proxy_dict)
+            tempUrl = requests.get(url, headers=headers, proxies=proxy_dict)
 
             code = tempUrl.status_code
             if code >= 200 or code < 300:
@@ -103,12 +105,12 @@ class GetIpProxy():
                 return tempUrl
             else:
                 self.proxyServer = self.get_random_ip()
-                return self.requestUrlForRe(url)
+                return self.requestUrlForRe(url, headers)
         except Exception as e:
             self.proxyServer = self.get_random_ip()
             s = requests.session()
             s.keep_alive = False
-            return self.requestUrlForRe(url)
+            return self.requestUrlForRe(url, headers)
 
 #
 # getIpProxy = GetIpProxy()
