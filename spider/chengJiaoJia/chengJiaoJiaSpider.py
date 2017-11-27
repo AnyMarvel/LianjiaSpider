@@ -68,7 +68,10 @@ class chengJiao:
 
         # print headers.get('Authorization')
         print(url)
-        self.get_result_json_list(url)
+        try:
+            self.get_result_json_list(url)
+        except Exception as e:
+            pass
 
     def get_result_json_list(self, url):
         # 替换代理模式
@@ -77,55 +80,55 @@ class chengJiao:
 
         # print result_list.text
         jsonsource = json.loads(result_list.text, encoding='utf-8')
+        if jsonsource["data"]['list'] is not None:
+            for index in range(len(jsonsource["data"]['list'])):
+                # print jsonsource["data"]['list']
+                self.request_ts = int(time.time())
+                er_shou_pruduct_url_authorization = '93273ef46a0b880faf4466c48f74878fhouse_code=' + str(
+                    jsonsource["data"]['list'][index]['house_code']) + 'request_ts=' + str(self.request_ts)
+                # 生成证书认证
+                self.generate_authorization(er_shou_pruduct_url_authorization)
 
-        for index in range(len(jsonsource["data"]['list'])):
-            # print jsonsource["data"]['list']
-            self.request_ts = int(time.time())
-            er_shou_pruduct_url_authorization = '93273ef46a0b880faf4466c48f74878fhouse_code=' + str(
-                jsonsource["data"]['list'][index]['house_code']) + 'request_ts=' + str(self.request_ts)
-            # 生成证书认证
-            self.generate_authorization(er_shou_pruduct_url_authorization)
+                chengjiao_pruduct_url = 'https://app.api.lianjia.com/house/chengjiao/detailpart1?house_code=' + str(
+                    jsonsource["data"]['list'][index]['house_code']) + '&request_ts=' + str(self.request_ts)
 
-            chengjiao_pruduct_url = 'https://app.api.lianjia.com/house/chengjiao/detailpart1?house_code=' + str(
-                jsonsource["data"]['list'][index]['house_code']) + '&request_ts=' + str(self.request_ts)
+                # todo 网络访问增加代理请求
+                # 替换代理模式
+                # result_product = requests.get(er_shou_pruduct_url, headers=self.headers)
+                result_product = self.GetIpProxy.requestUrlForRe(chengjiao_pruduct_url, self.headers)
 
-            # todo 网络访问增加代理请求
-            # 替换代理模式
-            # result_product = requests.get(er_shou_pruduct_url, headers=self.headers)
-            result_product = self.GetIpProxy.requestUrlForRe(chengjiao_pruduct_url, self.headers)
+                # print "result_product:" + result_product.text
 
-            # print "result_product:" + result_product.text
+                product_json = json.loads(result_product.text, encoding='utf-8')
+                self.cheng_jiao_data_analysis.chengjiao_product(product_json['data'])
 
-            product_json = json.loads(result_product.text, encoding='utf-8')
-            self.cheng_jiao_data_analysis.chengjiao_product(product_json['data'])
+                # 获取更多
+                self.request_ts = int(time.time())
+                chengjiao_pruduct_more_authorization = '93273ef46a0b880faf4466c48f74878fhouse_code=' + str(
+                    jsonsource["data"]['list'][index]['house_code']) + 'request_ts=' + str(self.request_ts)
+                # 生成证书认证
+                self.generate_authorization(chengjiao_pruduct_more_authorization)
 
-            # 获取更多
-            self.request_ts = int(time.time())
-            chengjiao_pruduct_more_authorization = '93273ef46a0b880faf4466c48f74878fhouse_code=' + str(
-                jsonsource["data"]['list'][index]['house_code']) + 'request_ts=' + str(self.request_ts)
-            # 生成证书认证
-            self.generate_authorization(chengjiao_pruduct_more_authorization)
+                chengjiao_more_url = 'https://app.api.lianjia.com/house/house/moreinfo?house_code=' + str(
+                    jsonsource["data"]['list'][index]['house_code']) + '&request_ts=' + str(self.request_ts)
 
-            chengjiao_more_url = 'https://app.api.lianjia.com/house/house/moreinfo?house_code=' + str(
-                jsonsource["data"]['list'][index]['house_code']) + '&request_ts=' + str(self.request_ts)
+                # todo 网络访问增加代理请求
+                # 替换代理模式
+                # result_product_more = requests.get(chengjiao_more_url, headers=self.headers)
+                result_product_more = self.GetIpProxy.requestUrlForRe(chengjiao_more_url, self.headers)
 
-            # todo 网络访问增加代理请求
-            # 替换代理模式
-            # result_product_more = requests.get(chengjiao_more_url, headers=self.headers)
-            result_product_more = self.GetIpProxy.requestUrlForRe(chengjiao_more_url, self.headers)
+                product_json_more = json.loads(result_product_more.text, encoding='utf-8')
 
-            product_json_more = json.loads(result_product_more.text, encoding='utf-8')
+                row = row = index + self.current_page * self.limit_count
 
-            row = row = index + self.current_page * self.limit_count
+                print 'row:' + str(row) + '   url:' + chengjiao_pruduct_url
 
-            print 'row:' + str(row) + '   url:' + chengjiao_pruduct_url
+                self.cheng_jiao_data_analysis.chengjiao_more_infos(product_json_more, row, self.generate_excle)
 
-            self.cheng_jiao_data_analysis.chengjiao_more_infos(product_json_more, row, self.generate_excle)
-
-            # print result_product_more.text
+                # print result_product_more.text
 
 
-            # print product_json['data']
+                # print product_json['data']
 
     def generate_authorization(self, str):
         sha1 = hashlib.sha1(str).hexdigest()
