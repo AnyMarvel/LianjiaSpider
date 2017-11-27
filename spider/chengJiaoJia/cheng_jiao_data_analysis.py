@@ -77,11 +77,13 @@ class cheng_jiao_data_analysis:
                 column = self.chengjiao_constant.chengjiao_source_data.get(tempdata)
                 data = self.chengjiao_product_entity.get(item)
 
-                if tempdata == '建筑面积' or tempdata == '售价(万)':
+                if tempdata == '建筑面积' or tempdata == '售价(万)' or tempdata == '挂牌价格(万)':
                     if tempdata == '建筑面积':
-                        data = data[0:data.index('㎡')]
-                    else:
-                        data = data[0:data.index('万')]
+                        if data.find('㎡') != -1:
+                            data = data[0:data.index('㎡')]
+                    elif tempdata == '售价(万)':
+                        if data.find('万') != -1:
+                            data = data[0:data.index('万')]
                     # print data
                     style = xlwt.XFStyle()
                     style.num_format_str = '0.00'
@@ -92,14 +94,18 @@ class cheng_jiao_data_analysis:
                     style.num_format_str = 'YYYY/MM/DD'
                     generate_excle.wirte_Excle_In_style(row + 1, column, data, style)
                 elif tempdata == '成交价(元/平)' or tempdata == '关注(人)' or tempdata == '带看(次)' or tempdata == '浏览(次)' \
-                        or tempdata == '成交周期(天)' or tempdata == '挂牌价格(万)' or tempdata == '调价(次)' \
+                        or tempdata == '成交周期(天)' or tempdata == '调价(次)' \
                         or tempdata == '建成时间':
-                    if tempdata == '建成时间':
-                        data = data[0:data.index('年') - 1]
-                    style = xlwt.XFStyle()
-                    style.num_format_str = '0'
-                    # print data
-                    generate_excle.wirte_Excle_In_style(row + 1, column, int(data), style)
+                    try:
+                        if tempdata == '建成时间':
+                            if data.find('年') != -1:
+                                data = data[0:data.index('年') - 1]
+                        style = xlwt.XFStyle()
+                        style.num_format_str = '0'
+                        # print data
+                        generate_excle.wirte_Excle_In_style(row + 1, column, int(data), style)
+                    except Exception as e:
+                        pass
                 else:
                     generate_excle.writeExclePositon(row + 1, column, data)
                     # generate_excle.writeExclePositon(row + 1, column, data)

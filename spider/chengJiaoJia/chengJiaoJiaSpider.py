@@ -10,10 +10,11 @@ from spider.generate_excle import generate_excle
 from chengjiao_constant import chengjiao_constant
 from spider.AgentAndProxies import GetIpProxy
 
+
 class chengJiao:
     def __init__(self):
         # 爬取页数
-        self.count = 1
+        self.count = 200
         # 一页一共多少数据
         self.limit_count = 10
         # 第几页（页数*一页一共多少数据）
@@ -93,7 +94,6 @@ class chengJiao:
             # result_product = requests.get(er_shou_pruduct_url, headers=self.headers)
             result_product = self.GetIpProxy.requestUrlForRe(chengjiao_pruduct_url, self.headers)
 
-            print 'row:' + str(index) + '   url:' + chengjiao_pruduct_url
             # print "result_product:" + result_product.text
 
             product_json = json.loads(result_product.text, encoding='utf-8')
@@ -116,7 +116,9 @@ class chengJiao:
 
             product_json_more = json.loads(result_product_more.text, encoding='utf-8')
 
-            row = row = index + self.current_page * 30
+            row = row = index + self.current_page * self.limit_count
+
+            print 'row:' + str(row) + '   url:' + chengjiao_pruduct_url
 
             self.cheng_jiao_data_analysis.chengjiao_more_infos(product_json_more, row, self.generate_excle)
 
