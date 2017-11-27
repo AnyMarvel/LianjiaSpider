@@ -15,9 +15,9 @@ class zaishou:
         # 爬取页数
         self.count = 1
         # 一页一共多少数据
-        self.limit_count = 10
+        self.limit_count = 1
         # 第几页（页数*一页一共多少数据）
-        self.limit_offset = -10
+        self.limit_offset = -1
         # 当前时间
         self.request_ts = 0
         # 当前是第几页 从第0页开始
