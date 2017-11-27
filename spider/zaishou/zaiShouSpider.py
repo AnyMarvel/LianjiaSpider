@@ -16,9 +16,9 @@ class zaishou:
         # 爬取页数
         self.count = 271
         # 一页一共多少数据
-        self.limit_count = 10
+        self.limit_count = 100
         # 第几页（页数*一页一共多少数据）
-        self.limit_offset = -10
+        self.limit_offset = -100
         # 当前时间
         self.request_ts = 0
         # 当前是第几页 从第0页开始
@@ -95,7 +95,6 @@ class zaishou:
             # 替换代理模式
             # result_product = requests.get(zaishou_pruduct_url, headers=self.headers)
             result_product = self.GetIpProxy.requestUrlForRe(zaishou_pruduct_url, self.headers)
-            print 'row:' + str(index) + 'url:' + zaishou_pruduct_url
             # print result_product.text
 
             product_json = json.loads(result_product.text, encoding='utf-8')
@@ -115,7 +114,12 @@ class zaishou:
 
             product_json_more = json.loads(result_product_more.text, encoding='utf-8')
 
-            row = row = index + self.current_page * 30
+            if self.current_page == 0:
+                row = index + self.current_page * self.limit_count
+            else:
+                row = index + self.current_page * self.limit_count + 10
+            print 'row:' + str(row) + '  url:' + zaishou_pruduct_url
+
             self.zaishou_data_analysis.zaishou_product_moire(product_json_more, row, self.generate_excle)
 
             # print result_product_more.text
