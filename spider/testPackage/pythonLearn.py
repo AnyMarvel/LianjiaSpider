@@ -11,7 +11,9 @@
 #
 # print temp[0], temp[1], temp[2]
 
-
+time_d = '2017.10.28'
+temp_d = time_d.replace('.', '/')
+print temp_d
 
 # import base64
 # import hashlib
@@ -28,4 +30,4 @@ import time
 # print int(time.time())
 
 # 时间格式化
-print time.strftime('%Y-%m-%d', time.localtime(1504863733))
+# print time.strftime('%Y-%m-%d', time.localtime(1504863733))

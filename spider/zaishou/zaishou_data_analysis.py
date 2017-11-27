@@ -88,9 +88,14 @@ class zaishou_data_analysis:
         # for item in self.zaishou_product_entity.keys():
         #     print item + str(self.zaishou_product_entity.get(item))
 
+        # excle写入单元内容
         for item in self.zaishou_product_entity.keys():
             tempdata = self.zaishou_constant.zaishou_check_name(item.replace('：', '').encode('utf-8'))
             if tempdata is not None:
-                generate_excle.writeExclePositon(row + 1,
-                                                 self.zaishou_constant.zaishou_source_data.get(tempdata),
-                                                 self.zaishou_product_entity.get(item))
+                count = self.zaishou_constant.zaishou_source_data.get(tempdata)  # 得到数据源所对应的列的位置
+                data = self.zaishou_product_entity.get(item)  # 得到数据源
+                if tempdata == '建筑面积' or tempdata == '售价(万)' or tempdata == '建成时间':
+                    data = data[0:len(data) - 1]
+                elif tempdata == '挂牌时间' or tempdata == '上次交易':
+                    data = data.replace('.', '/')
+                generate_excle.writeExclePositon(row + 1, count, data)
