@@ -17,6 +17,7 @@ class generate_excle:
             sys.setdefaultencoding('utf-8')
         self.raws = []
         self.wb = xlwt.Workbook(encoding='utf-8')
+        self.style = xlwt.XFStyle()
 
     def writeExclePositon(self, rowNumber, column, source_data):
         self.ws.write(rowNumber, column, source_data)

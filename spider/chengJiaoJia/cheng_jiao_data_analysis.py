@@ -85,14 +85,12 @@ class cheng_jiao_data_analysis:
                         if data.find('万') != -1:
                             data = data[0:data.index('万')]
                     # print data
-                    style = xlwt.XFStyle()
-                    style.num_format_str = '0.00'
-                    generate_excle.wirte_Excle_In_style(row + 1, column, float(data), style)
+                    generate_excle.style.num_format_str = '0.00'
+                    generate_excle.wirte_Excle_In_style(row + 1, column, float(data), generate_excle.style)
                 elif tempdata == '成交时间':
                     data = data.replace('.', '/')
-                    style = xlwt.XFStyle()
-                    style.num_format_str = 'YYYY/MM/DD'
-                    generate_excle.wirte_Excle_In_style(row + 1, column, data, style)
+                    generate_excle.style.num_format_str = 'YYYY/MM/DD'
+                    generate_excle.wirte_Excle_In_style(row + 1, column, data, generate_excle.style)
                 elif tempdata == '成交价(元/平)' or tempdata == '关注(人)' or tempdata == '带看(次)' or tempdata == '浏览(次)' \
                         or tempdata == '成交周期(天)' or tempdata == '调价(次)' \
                         or tempdata == '建成时间':
@@ -100,10 +98,9 @@ class cheng_jiao_data_analysis:
                         if tempdata == '建成时间':
                             if data.find('年') != -1:
                                 data = data[0:data.index('年') - 1]
-                        style = xlwt.XFStyle()
-                        style.num_format_str = '0'
+                        generate_excle.style.num_format_str = '0'
                         # print data
-                        generate_excle.wirte_Excle_In_style(row + 1, column, int(data), style)
+                        generate_excle.wirte_Excle_In_style(row + 1, column, int(data), generate_excle.style)
                     except Exception as e:
                         pass
                 else:
