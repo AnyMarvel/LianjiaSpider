@@ -15,17 +15,17 @@ time_d = '2017.10.28'
 temp_d = time_d.replace('.', '/')
 print temp_d
 
-# import base64
-# import hashlib
+import base64
+import hashlib
 import time
 
 ##链家加密处理
-# str = '93273ef46a0b880faf4466c48f74878fhouse_code=101101703001request_ts=1511334292'
-# sha1 = hashlib.sha1(str).hexdigest()
-#
-# temp = '20170324_android:' + sha1
-#
-# print base64.b64encode(temp)
+str = '93273ef46a0b880faf4466c48f74878fcity_id=110000limit_count=100limit_offset=0request_ts=' + str(int(time.time()))
+sha1 = hashlib.sha1(str).hexdigest()
+
+temp = '20170324_android:' + sha1
+
+print base64.b64encode(temp)
 # # 打印当前时间
 # print int(time.time())
 

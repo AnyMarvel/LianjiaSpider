@@ -14,11 +14,11 @@ from spider.AgentAndProxies import GetIpProxy
 class zaishou:
     def __init__(self):
         # 爬取页数
-        self.count = 1
+        self.count = 271
         # 一页一共多少数据
-        self.limit_count = 1
+        self.limit_count = 10
         # 第几页（页数*一页一共多少数据）
-        self.limit_offset = -1
+        self.limit_offset = -10
         # 当前时间
         self.request_ts = 0
         # 当前是第几页 从第0页开始

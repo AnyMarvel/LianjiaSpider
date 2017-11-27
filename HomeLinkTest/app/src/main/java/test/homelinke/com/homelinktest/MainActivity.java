@@ -17,12 +17,12 @@ import java.util.Map;
 
 
 public class MainActivity extends AppCompatActivity {
-    //    final String source = "https://app.api.lianjia.com/house/chengjiao/search?city_id=110000&limit_offset=0&limit_count=100&request_ts=1511232061";
+        final String source = "https://app.api.lianjia.com/house/chengjiao/search?city_id=110000&limit_offset=0&limit_count=1000&request_ts=1511232061";
 //    final String source = "https://app.api.lianjia.com/house/ershoufang/searchv4?city_id=110000&priceRequest=&limit_offset=0&moreRequest=&communityRequset=&has_recommend=1&is_suggestion=0&limit_count=20&sugQueryStr=&comunityIdRequest=&areaRequest=&is_history=0&schoolRequest=&condition=&roomRequest=&isFromMap=false&request_ts=1511327905";
 //    final String source="https://app.api.lianjia.com/house/chengjiao/detailpart1?house_code=101102035004&request_ts=1511334292";
 //    final String source="https://app.api.lianjia.com/house/zufang/searchV2?city_id=110000&priceRequest=&limit_offset=0&moreRequest=&communityRequset=&is_suggestion=0&limit_count=20&sugQueryStr=&comunityIdRequest=&areaRequest=&is_history=0&condition=&roomRequest=&isFromMap=false&request_ts=1511339341";
 //    final String source = "https://app.api.lianjia.com/house/ershoufang/detailpart1?house_code=101102233336&agent_type=1&request_ts=1511345004";
-    final String source = "https://app.api.lianjia.com/house/house/moreinfo?house_code=101102055046&request_ts=1511345701";
+//    final String source = "https://app.api.lianjia.com/house/house/moreinfo?house_code=101102055046&request_ts=1511345701";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

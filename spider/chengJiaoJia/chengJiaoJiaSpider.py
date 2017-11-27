@@ -10,6 +10,7 @@ from spider.generate_excle import generate_excle
 from chengjiao_constant import chengjiao_constant
 from spider.AgentAndProxies import GetIpProxy
 
+
 class chengJiao:
     def __init__(self):
         # 爬取页数
