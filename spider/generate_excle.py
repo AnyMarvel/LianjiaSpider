@@ -21,8 +21,11 @@ class generate_excle:
     def writeExclePositon(self, rowNumber, column, source_data):
         self.ws.write(rowNumber, column, source_data)
 
-    def saveExcle(self,name):
-        #u'LianJiaSpider.xls'
+    def wirte_Excle_In_style(self, rowNumber, column, source_data, style):
+        self.ws.write(rowNumber, column, source_data, style)
+
+    def saveExcle(self, name):
+        # u'LianJiaSpider.xls'
         self.wb.save(name)
 
     def addSheetExcle(self, sheetName):

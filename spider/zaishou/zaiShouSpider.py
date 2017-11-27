@@ -89,7 +89,7 @@ class zaishou:
             zaishou_pruduct_url = 'https://app.api.lianjia.com/house/ershoufang/detailpart1?house_code=' + str(
                 jsonsource["data"]['list'][index]['house_code']) + '&agent_type=1&request_ts=' + str(self.request_ts)
             result_product = requests.get(zaishou_pruduct_url, headers=self.headers)
-            print zaishou_pruduct_url
+            print 'row:' + str(index) + 'url:' + zaishou_pruduct_url
             # print result_product.text
 
             product_json = json.loads(result_product.text, encoding='utf-8')

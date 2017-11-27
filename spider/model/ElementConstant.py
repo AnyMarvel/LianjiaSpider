@@ -104,13 +104,5 @@ class ElementConstant:
             if temp_data == '看过房源':
                 return '看过房源：人'
 
-    def excleTest(self):
-
-        self.generate_excle = generate_excle()
-        self.generate_excle.addSheetExcle('testsheet')
-        for index in self.data_constant.keys():
-            self.generate_excle.writeExclePositon(0, self.data_constant.get(index), index)
-        self.generate_excle.saveExcle()
-
 # Element_Constant = ElementConstant()
 # Element_Constant.excleTest()
