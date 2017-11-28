@@ -4,8 +4,11 @@ import requests
 import base64
 import hashlib
 import json
-from cheng_jiao_data_analysis import cheng_jiao_data_analysis
 import sys
+
+sys.path.append('/home/lijuntao/PycharmProjects/LianJiaSpider')
+
+from cheng_jiao_data_analysis import cheng_jiao_data_analysis
 from spider.generate_excle import generate_excle
 from chengjiao_constant import chengjiao_constant
 from spider.AgentAndProxies import GetIpProxy
@@ -13,14 +16,14 @@ from spider.AgentAndProxies import GetIpProxy
 
 class chengJiao:
     def __init__(self):
-        # 爬取页数
-        self.count = 300
-        # 一页一共多少数据
-        self.limit_count = 100
-        # 第几页（页数*一页一共多少数据）
-        self.limit_offset = -100
-        # 当前时间
-        self.request_ts = 0
+        # # 爬取页数
+        # self.count = 300
+        # # 一页一共多少数据
+        # self.limit_count = 100
+        # # 第几页（页数*一页一共多少数据）
+        # self.limit_offset = -100
+        # # 当前时间
+        # self.request_ts = 0
         # 当前是第几页 从第0页开始
         self.current_page = 0
         # 由android JNI逆向得出的链家apk秘钥
@@ -45,13 +48,21 @@ class chengJiao:
         self.GetIpProxy = GetIpProxy()
 
     def start(self):
+        # 爬取页数
+        self.count = input('输入请求页数:')
+        # 一页一共多少数据
+        self.limit_count = input('输入每页请求多少数据:')
+        # 第几页（页数*一页一共多少数据） 起始数据
+        self.limit_offset = input('输入请求起始数据:')
+        excleName = raw_input('输入要保存的文件名称:')
+
         self.excle_init_title()
         for i in range(self.count):
             self.current_page = i
             # time.sleep(1)
             self.request_url_list()
         # 完成循环后保存excle
-        self.generate_excle.saveExcle('chengjiao.xls')
+        self.generate_excle.saveExcle(excleName + '.xls')
 
     def request_url_list(self):
         self.limit_offset = self.limit_offset + self.limit_count
@@ -68,10 +79,7 @@ class chengJiao:
 
         # print headers.get('Authorization')
         print(url)
-        try:
-            self.get_result_json_list(url)
-        except Exception as e:
-            pass
+        self.get_result_json_list(url)
 
     def get_result_json_list(self, url):
         # 替换代理模式
@@ -139,7 +147,7 @@ class chengJiao:
     def excle_init_title(self):
         self.generate_excle = generate_excle()
         self.generate_excle.addSheetExcle('chengjiao')
-        self.chengjiao_constant = chengjiao_constant();
+        self.chengjiao_constant = chengjiao_constant()
         for itemKey in self.chengjiao_constant.chengjiao_source_data.keys():
             self.generate_excle.writeExclePositon(0, self.chengjiao_constant.chengjiao_source_data.get(itemKey),
                                                   itemKey)

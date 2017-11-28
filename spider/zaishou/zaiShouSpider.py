@@ -5,8 +5,11 @@ import base64
 import hashlib
 import json
 import sys
-from zaishou_data_analysis import zaishou_data_analysis
+
+sys.path.append('/home/lijuntao/PycharmProjects/LianJiaSpider')
+
 from spider.generate_excle import generate_excle
+from zaishou_data_analysis import zaishou_data_analysis
 from zaishou_constant import zaishou_constant
 from spider.AgentAndProxies import GetIpProxy
 
@@ -14,7 +17,7 @@ from spider.AgentAndProxies import GetIpProxy
 class zaishou:
     def __init__(self):
         # 爬取页数
-        self.count = 271
+        self.count = 21
         # 一页一共多少数据
         self.limit_count = 100
         # 第几页（页数*一页一共多少数据）

@@ -2,12 +2,19 @@
 import random
 import re
 import requests
+import sys
+
 from bs4 import BeautifulSoup
+
+sys.path.append("/home/lijuntao/PycharmProjects/LianJiaSpider/spider")
+
 from generate_excle import generate_excle
 from AgentAndProxies import hds
 from AgentAndProxies import GetIpProxy
 import lxml
-import sys
+
+sys.path.append("/home/lijuntao/PycharmProjects/LianJiaSpider/spider/model")
+
 from model.ElementConstant import ElementConstant
 
 defaultencoding = 'utf-8'
