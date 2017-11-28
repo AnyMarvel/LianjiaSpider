@@ -16,14 +16,14 @@ from spider.AgentAndProxies import GetIpProxy
 
 class chengJiao:
     def __init__(self):
-        # # 爬取页数
-        # self.count = 300
-        # # 一页一共多少数据
-        # self.limit_count = 100
-        # # 第几页（页数*一页一共多少数据）
-        # self.limit_offset = -100
-        # # 当前时间
-        # self.request_ts = 0
+        # 爬取页数
+        self.count = 300
+        # 一页一共多少数据
+        self.limit_count = 100
+        # 第几页（页数*一页一共多少数据）
+        self.limit_offset = -100
+        # 当前时间
+        self.request_ts = 0
         # 当前是第几页 从第0页开始
         self.current_page = 0
         # 由android JNI逆向得出的链家apk秘钥
