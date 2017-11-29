@@ -88,7 +88,7 @@ class chengJiao:
 
         # print result_list.text
         jsonsource = json.loads(result_list.text, encoding='utf-8')
-        if jsonsource["data"]['list'] is not None:
+        if jsonsource.get("data") is not None and jsonsource.get("data").get('list') is not None:
             for index in range(len(jsonsource["data"]['list'])):
                 # print jsonsource["data"]['list']
                 self.request_ts = int(time.time())
@@ -108,7 +108,7 @@ class chengJiao:
                 # print "result_product:" + result_product.text
 
                 product_json = json.loads(result_product.text, encoding='utf-8')
-                self.cheng_jiao_data_analysis.chengjiao_product(product_json['data'])
+                self.cheng_jiao_data_analysis.chengjiao_product(product_json.get('data'))
 
                 # 获取更多
                 self.request_ts = int(time.time())
