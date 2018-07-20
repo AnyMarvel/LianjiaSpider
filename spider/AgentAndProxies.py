@@ -46,17 +46,21 @@ class GetIpProxy():
         self.getIpPool()
         self.proxyServer = ()
 
+    # 获得IP代理池子
     def getIpPool(self):
-        geturl = requests.get('http://www.xicidaili.com/', headers=hds[random.randint(0, len(hds) - 1)])
+        geturl = requests.get('https://raw.githubusercontent.com/fate0/proxylist/master/proxy.list',
+                              headers=hds[random.randint(0, len(hds) - 1)])
         # partent = re.compile('<tr class=.*?>.*?<td class="country"><img src=.*?td>(.*?)</tr>', re.S)
-        partent = re.compile('<tr class=.*?>.*?<td class="country"><img src=.*?td>.*?<td>(.*?)'
-                             '</td>.*?<td>(.*?)</td>.*?td>.*?<td>(.*?)<.*?</tr>', re.S)
+        partent = re.compile('{(.*?)}', re.S)
         result = re.findall(partent, geturl.text)
         for item in result:
-            if item[2] != "socks4/5":
-                # print u"地址:" + item[0], u"端口:" + item[1], u"协议:" + item[2]
-                proxy_utl = '{0}://{1}:{2}'.format(item[2], item[0], item[1])
-                self.infos[proxy_utl.lower()] = item[2].lower()
+            json_source = json.loads('{' + item + '}')
+            # 协议类型
+            protocal = json_source.get('type')
+            if protocal is not None and protocal != 'socks4/5':
+                # host为地址  port为协议内容
+                proxy_utl = '{0}://{1}:{2}'.format(protocal, json_source.get('host'), json_source.get('port'))
+                self.infos[proxy_utl.lower()] = protocal.lower()
 
     def judge_ip(self, proxy_url, protocol):
         # 判断给出的代理 ip 是否可用
@@ -103,7 +107,7 @@ class GetIpProxy():
             code = tempUrl.status_code
             if code >= 200 or code < 300:
                 self.proxyServer = tempProxyServer
-                #适配链家内容是否为空的情况，进行ip动态置换
+                # 适配链家内容是否为空的情况，进行ip动态置换
                 jsonsource = json.loads(tempUrl.text, encoding='utf-8')
                 if jsonsource['data'] is not None:
                     return tempUrl
