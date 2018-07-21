@@ -4,6 +4,16 @@
 https://github.com/AnyMarvel/LianjiaSpider
 https://gitee.com/dssljt/LianjiaSpider
 
+依赖包 lxml requests BeautifulSoup xlwt xlrd Bs4
+
+mac or linux :
+
+sudo pip install lxml requests BeautifulSoup xlwt xlrd Bs4
+
+windows:
+
+pip install lxml requests BeautifulSoup xlwt xlrd Bs4
+
 项目目录说明:
 
 HomeLinkTest : Android 工程（用于破解链家App签名验证内容）
