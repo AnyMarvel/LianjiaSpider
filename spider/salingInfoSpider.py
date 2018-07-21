@@ -3,18 +3,12 @@ import random
 import re
 import requests
 import sys
+import lxml
 
 from bs4 import BeautifulSoup
-
-sys.path.append("/home/lijuntao/PycharmProjects/LianJiaSpider/spider")
-
 from generate_excle import generate_excle
 from AgentAndProxies import hds
 from AgentAndProxies import GetIpProxy
-import lxml
-
-sys.path.append("/home/lijuntao/PycharmProjects/LianJiaSpider/spider/model")
-
 from model.ElementConstant import ElementConstant
 
 defaultencoding = 'utf-8'
@@ -28,7 +22,7 @@ class salingInfo:
     def __init__(self):
         self.elementConstant = ElementConstant()
         self.getIpProxy = GetIpProxy()
-        self.url = "http://bj.lianjia.com/ershoufang/pg{}/"
+        self.url = "https://bj.lianjia.com/ershoufang/pg{}/"
         self.infos = {}
         self.proxyServer = ()
         # 传参使用进行excle生成
@@ -48,19 +42,18 @@ class salingInfo:
 
         for i in self.generate_allurl(user_in_nub):
             self.get_allurl(i)
-
-            # print(i)
-        self.generate_excle.saveExcle()
+            print(i)
+        self.generate_excle.saveExcle('LianJiaSpider.xls')
 
     def get_allurl(self, generate_allurl):
         geturl = self.requestUrlForRe(generate_allurl)
         if geturl.status_code == 200:
             # 提取title跳转地址　对应每个商品
-            re_set = re.compile('<li.*?class="clear">.*?<a.*?class="img.*?".*?href="(.*?)"')
+            re_set = re.compile('<li.*?<a.*?class="img.*?".*?href="(.*?)"')
             re_get = re.findall(re_set, geturl.text)
             for index in range(len(re_get)):
                 self.open_url(re_get[index], index)
-                # print re_get[index]
+                print re_get[index]
 
     def open_url(self, re_get, index):
         res = self.requestUrlForRe(re_get)

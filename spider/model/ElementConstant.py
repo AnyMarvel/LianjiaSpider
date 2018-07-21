@@ -22,7 +22,7 @@ class ElementConstant:
 
     def init_source_data(self):
         #
-        self.data_constant['序号'] = 0  # 第一个需要需要进行排序炒作
+        self.data_constant['序号'] = 0  # 第一个需要进行排序操作
         # 链家编号 链家编号
         self.data_constant['链家编号'] = 1
         #
