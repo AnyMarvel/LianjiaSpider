@@ -5,7 +5,8 @@ import time
 from zaishou.zaiShouSpider import zaishou
 from chengJiaoJia.chengJiaoJiaSpider import chengJiao
 
-
+# 在售和成交（基于移动端接口数据）加入工作线程爬虫
+#
 class spider_Process_Manager:
     def __init__(self):
         self.zaishou = zaishou()
