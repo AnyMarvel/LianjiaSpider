@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-
 class chengjiao_constant:
     def __init__(self):
         self.chengjiao_source_data = {}

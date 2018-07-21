@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 import time
-import requests
 import base64
 import hashlib
 import json
 import sys
+import os
 
-sys.path.append('/home/lijuntao/PycharmProjects/LianJiaSpider')
+sys.path.append(os.path.abspath(os.path.join(sys.argv[0], "../../..")))
 
 from spider.generate_excle import generate_excle
 from zaishou_data_analysis import zaishou_data_analysis

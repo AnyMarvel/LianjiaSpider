@@ -5,8 +5,10 @@ import base64
 import hashlib
 import json
 import sys
+import os
 
-sys.path.append('/home/lijuntao/PycharmProjects/LianJiaSpider')
+sys.path.append(os.path.abspath(os.path.join(sys.argv[0], "../../..")))
+
 
 from cheng_jiao_data_analysis import cheng_jiao_data_analysis
 from spider.generate_excle import generate_excle

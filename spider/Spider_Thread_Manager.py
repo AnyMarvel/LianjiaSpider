@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
-from multiprocessing import Process
 import sys, os
 import time
+sys.path.append(os.path.abspath(os.path.join(sys.argv[0], "../..")))
+
+from multiprocessing import Process
 from zaishou.zaiShouSpider import zaishou
 from chengJiaoJia.chengJiaoJiaSpider import chengJiao
 

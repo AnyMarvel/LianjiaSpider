@@ -1,16 +1,4 @@
 # -*- coding: utf-8 -*-
-import sys
-
-import os
-from os import path
-
-d = path.dirname(__file__)
-parent_path = os.path.dirname(d)  # 获得d所在的目录,即d的父级目录
-parent_path = os.path.dirname(parent_path)  ##获得parent_path所在的目录即parent_path的父级目录
-sys.path.append('/home/lijuntao/PycharmProjects/LianJiaSpider')
-
-from spider.generate_excle import generate_excle
-
 
 # 修改默认抓取数据,进行数据优化
 

@@ -2,7 +2,6 @@
 import sys
 
 import xlwt
-
 from chengjiao_constant import chengjiao_constant
 
 defaultencoding = 'utf-8'
